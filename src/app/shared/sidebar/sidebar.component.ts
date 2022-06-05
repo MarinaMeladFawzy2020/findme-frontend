@@ -12,6 +12,9 @@ export class SidebarComponent implements OnInit {
   constructor(private authService:AuthService  , private router:Router) { }
 
   ngOnInit(): void {
+     this.UserInfo = sessionStorage.getItem("UserInfo")
+     //console.log(JSON.parse(this.UserInfo))
+     this.username= JSON.parse(this.UserInfo).gardName;
   }
 
   viewProfile(){ 
