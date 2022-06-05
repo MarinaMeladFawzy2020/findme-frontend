@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20">
+  <g id="Group_164" data-name="Group 164" transform="translate(-870 262)">
+    <g id="Group_163" data-name="Group 163" transform="translate(24.578 -0.641)">
+      <path id="Stroke_1" data-name="Stroke 1" d="M.526,7.9a.75.75,0,0,1-.75-.75V0a.75.75,0,0,1,1.5,0V7.148A.75.75,0,0,1,.526,7.9Z" transform="translate(855.224 -254.609)" fill="#25304e"/>
+      <path id="Stroke_2" data-name="Stroke 2" d="M7.156,1.276H0a.75.75,0,0,1,0-1.5H7.156a.75.75,0,1,1,0,1.5Z" transform="translate(852.172 -251.561)" fill="#25304e"/>
+    </g>
+    <path id="Stroke_1-2" data-name="Stroke 1" d="M9.25-.75a10,10,0,1,1-10,10A10.011,10.011,0,0,1,9.25-.75Zm0,18.5a8.5,8.5,0,1,0-8.5-8.5A8.51,8.51,0,0,0,9.25,17.75Z" transform="translate(870.75 -261.25)" fill="#25304e"/>
+  </g>
+</svg>

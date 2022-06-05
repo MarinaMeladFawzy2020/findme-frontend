@@ -1,0 +1,54 @@
+<p-toast position="top-right"></p-toast>
+
+<h4 class="text-center mt-2 mb-2 text-dark-red-bold">Login</h4>
+
+<form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+    <div class="p-fluid p-grid">
+        <label for="inputEmail"> Your Email * </label>
+        <div>
+            <span class="p-input-icon-left">
+                <i class="pi pi-envelope"></i>
+                <input type="email"  pInputText placeholder="example@mail.com"    formControlName="username" name="username"
+                [ngClass]="{'border-danger': loginForm.get('username')?.invalid && loginForm.get('username')?.errors &&
+                (loginForm.get('username')?.dirty || loginForm.get('username')?.touched) } " />
+            </span>
+        </div>
+        <div *ngIf="loginForm.get('username')?.invalid && loginForm.get('username')?.errors && (loginForm.get('username')?.dirty || loginForm.get('username')?.touched)">
+            <small class="form-text text-danger mt-1" *ngIf="loginForm.controls['username']?.errors?.['required']"> Email is required.</small>
+            <small class="form-text text-danger mt-1" *ngIf="loginForm.controls['username']?.errors?.['email']"> Email is Not Valid.</small>
+        </div>
+
+    </div>
+    <br>
+
+    <div class="p-fluid p-grid ">
+        <label for="inputPassword"> Your Password * </label>
+        <div>
+            <span class="p-input-icon-left">
+                <i class="pi pi-lock"></i>
+                <input type="password" pInputText placeholder="password"   formControlName="password" name="password"
+                [ngClass]="{'border-danger': loginForm.get('password')?.invalid && loginForm.get('password')?.errors &&
+                (loginForm.get('password')?.dirty || loginForm.get('password')?.touched) } " />
+            </span>
+        </div>
+        <div *ngIf="loginForm.get('password')?.invalid && loginForm.get('password')?.errors && (loginForm.get('password')?.dirty || loginForm.get('password')?.touched)">
+            <small class="form-text text-danger mt-1" *ngIf="loginForm.controls['password']?.errors?.['required']"> Password is required.</small>
+        </div>
+      
+    </div>
+
+    <br>
+    <hr class="mt-1 mb-1">
+
+    <div class="mt-2 mb-3">
+        <button class="btn btn-default  main-btn mt-4  full-width" type="submit"  [disabled]="loginForm.invalid" >
+            Login
+        </button>
+    </div>
+    <div class="form-text text-danger mt-1 text-center" >{{showErrorMessage}}</div>
+    <br />
+
+<!-- <div class="col-12 text-center mt-3 mb-3">
+        <a href="#register" data-toggle="tab" class="nav-link-inline font-size-sm">Don’t have an account? signup</a>
+    </div> -->
+</form>

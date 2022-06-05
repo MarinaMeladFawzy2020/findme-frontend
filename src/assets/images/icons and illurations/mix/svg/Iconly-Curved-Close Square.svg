@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="26.167" height="26.167" viewBox="0 0 26.167 26.167">
+  <g id="Iconly_Curved_Close_Square" data-name="Iconly/Curved/Close Square" transform="translate(0.75 0.75)">
+    <g id="Close_Square" data-name="Close Square" transform="translate(0 0)">
+      <path id="Stroke_1" data-name="Stroke 1" d="M6.389,0,0,6.389" transform="translate(9.136 9.126)" fill="none" stroke="#25304e" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="1.5"/>
+      <path id="Stroke_2" data-name="Stroke 2" d="M6.4,6.4,0,0" transform="translate(9.133 9.124)" fill="none" stroke="#25304e" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="1.5"/>
+      <path id="Stroke_3" data-name="Stroke 3" d="M0,12.333c0,9.249,3.084,12.333,12.333,12.333s12.333-3.084,12.333-12.333S21.583,0,12.333,0,0,3.084,0,12.333Z" transform="translate(0 0)" fill="none" stroke="#25304e" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="1.5"/>
+    </g>
+  </g>
+</svg>

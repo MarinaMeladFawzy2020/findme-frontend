@@ -1,0 +1,109 @@
+<!-- <h4 class="text-center mt-2 mb-2 text-dark-red-bold">ٍSign up</h4> -->
+<p-toast position="top-right"></p-toast>
+
+<br>
+<form id="signup" [formGroup]="signupForm" (ngSubmit)="onSubmit()">
+
+        <div class="row  mb-3">
+          <div class="col-6">
+            <label for="inputtext1"> Full Name * </label>
+            <div>
+                <span class="p-input-icon-left">
+                    <i class="pi pi-user"></i>
+                    <input type="text"  pInputText placeholder="gardName"    formControlName="gardName" name="gardName"
+                    [ngClass]="{'border-danger': signupForm.get('gardName')?.invalid && signupForm.get('gardName')?.errors &&
+                    (signupForm.get('gardName')?.dirty || signupForm.get('gardName')?.touched) } " />
+                </span>
+            </div>
+            <div *ngIf="signupForm.get('gardName')?.invalid && signupForm.get('gardName')?.errors && (signupForm.get('gardName')?.dirty || signupForm.get('gardName')?.touched)">
+                <small class="form-text text-danger mt-1" *ngIf="signupForm.controls['gardName']?.errors?.['required']"> gardName is required.</small>
+            </div>
+          </div>
+          <div class="col-6">
+            <label for="inputtext2"> createUser * </label>
+            <div>
+                <span class="p-input-icon-left">
+                    <i class="pi pi-user"></i>
+                    <input type="text"  pInputText placeholder="createUser"    formControlName="createUser" name="createUser"
+                    [ngClass]="{'border-danger': signupForm.get('createUser')?.invalid && signupForm.get('createUser')?.errors &&
+                    (signupForm.get('createUser')?.dirty || signupForm.get('createUser')?.touched) } " />
+                </span>
+            </div>
+            <div *ngIf="signupForm.get('createUser')?.invalid && signupForm.get('createUser')?.errors && (signupForm.get('createUser')?.dirty || signupForm.get('createUser')?.touched)">
+                <small class="form-text text-danger mt-1" *ngIf="signupForm.controls['createUser']?.errors?.['required']"> createUser is required.</small>
+            </div>
+
+          </div>
+        </div>
+
+        <div class="row  mb-3">
+            <div class="col-6">
+                <label for="inputEmail"> Your Email * </label>
+                <div>
+                    <span class="p-input-icon-left">
+                        <i class="pi pi-envelope"></i>
+                        <input type="email"  pInputText placeholder="example@mail.com" [(ngModel)]="email"   formControlName="email" name="email"
+                        [ngClass]="{'border-danger': signupForm.get('email')?.invalid && signupForm.get('email')?.errors &&
+                        (signupForm.get('email')?.dirty || signupForm.get('email')?.touched) } " />
+                    </span>
+                </div>
+                <div *ngIf="signupForm.get('email')?.invalid && signupForm.get('email')?.errors && (signupForm.get('email')?.dirty || signupForm.get('email')?.touched)">
+                    <small class="form-text text-danger mt-1" *ngIf="signupForm.controls['email']?.errors?.['required']"> Email is required.</small>
+                    <small class="form-text text-danger mt-1" *ngIf="signupForm.controls['email']?.errors?.['email']"> Email is Not Valid.</small>
+                </div>
+               
+            </div>
+            <div class="col-6">
+                <label for="inputPassword"> Your Password * </label>
+                <div>
+                    <span class="p-input-icon-left">
+                        <i class="pi pi-lock"></i>
+                        <input type="password" pInputText placeholder="password"   formControlName="password" name="password"
+                        [ngClass]="{'border-danger': signupForm.get('password')?.invalid && signupForm.get('password')?.errors &&
+                        (signupForm.get('password')?.dirty || signupForm.get('password')?.touched) } " />
+                    </span>
+                </div>
+                <div *ngIf="signupForm.get('password')?.invalid && signupForm.get('password')?.errors && (signupForm.get('password')?.dirty || signupForm.get('password')?.touched)">
+                    <small class="form-text text-danger mt-1" *ngIf="signupForm.controls['password']?.errors?.['required']"> Password is required.</small>
+                </div>
+               
+            </div>
+        </div>
+
+
+
+        <div class="row">
+            <div class="col-12">
+              <label for="inputtext2"> mobileNo * </label>
+              <div>
+                  <span class="p-input-icon-left">
+                      <i class="pi pi-phone"></i>
+                      <input type="text" ng2TelInput pInputText placeholder="mobileNo"    formControlName="mobileNo" name="mobileNo" maxlength="11"  (countryChange)="oncountryChange($event)"
+                      [ngClass]="{'border-danger': signupForm.get('mobileNo')?.invalid && signupForm.get('mobileNo')?.errors &&
+                      (signupForm.get('mobileNo')?.dirty || signupForm.get('mobileNo')?.touched) } " />
+                  </span>
+              </div>
+              <div *ngIf="signupForm.get('mobileNo')?.invalid && signupForm.get('mobileNo')?.errors && (signupForm.get('mobileNo')?.dirty || signupForm.get('mobileNo')?.touched)">
+                  <small class="form-text text-danger mt-1" *ngIf="signupForm.controls['mobileNo']?.errors?.['required']"> mobileNo is required.</small>
+              </div>
+  
+              <div *ngIf="signupForm.get('mobileNo')?.invalid && signupForm.get('mobileNo')?.errors && (signupForm.get('mobileNo')?.dirty || signupForm.get('mobileNo')?.touched)">
+                <small class="form-text text-danger mt-1" *ngIf="signupForm.controls['mobileNo']?.errors?.['pattern']"> mobileNo is not Valid.</small>
+            </div>
+
+            
+
+            </div>
+          </div>
+    <br>
+    <hr class="mt-1 mb-1">
+
+    <div class="mt-2 mb-3">
+        <button class="btn btn-default  main-btn mt-4  full-width" type="submit"  [disabled]="signupForm.invalid" >
+            Create
+        </button>
+    </div>
+    <div *ngIf="mesgSuccess" class="form-text text-success mt-1 text-center" >{{showErrorMessage}}</div>
+    <div *ngIf="mesgErorr" class="form-text text-danger mt-1 text-center" >{{showErrorMessage}}</div>
+    <br />
+</form>

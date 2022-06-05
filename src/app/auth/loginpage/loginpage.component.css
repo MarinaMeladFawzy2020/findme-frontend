@@ -1,0 +1,45 @@
+.homepage{
+    background-color: #ddd;
+}
+
+.logoimage{
+    width: 40%;
+    padding: 0 10px;
+    margin-left: 29%;
+}
+
+
+.shadow-2-strong{
+    border-radius: 0.25rem; 
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    border: 0;
+}
+.signup .nav-tabs .nav-link {
+    background: #dddddd;
+    border: 0;
+    text-align: center;
+    color: #000;
+    text-transform: uppercase;
+}
+
+.signup .nav-tabs .nav-link.active {
+    background: #25304E;
+    color: #fff;
+}
+
+
+.signup .nav-tabs li.nav-item {
+    width: 50%;
+    line-height: 50px;
+}
+
+#myTabContent{
+    padding: 10px 20px;
+}
+#login-tab{
+    border-radius: 0.25rem 0 0 0;
+}
+
+#register-tab{
+    border-radius: 0 0.25rem 0 0;
+}

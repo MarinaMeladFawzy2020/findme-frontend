@@ -1,0 +1,55 @@
+/* You can add global styles to this file, and also import other style files */
+@font-face {
+    font-family: "Montserrat";
+    src: url("assets/font/Montserrat/Montserrat-VariableFont_wght.ttf");
+}
+
+.Montserrat {
+    font-family: "Montserrat";
+}
+
+body{
+    font-family: "Montserrat";
+}
+.dark-red{
+    background: #B92056;
+    color: #fff;
+}
+
+.dark-blue{
+    background: #25304E;
+    color: #fff;
+}
+
+.text-dark-red{
+    color: #B92056;
+}
+
+.text-dark-red-bold{
+color: #B92056;
+font-weight: 600;
+}
+
+.p-password.ng-invalid.ng-dirty > .p-password > .p-inputtext{
+    padding-left: 39px !important;
+ }
+
+ .success-text{
+     color: green;
+ }
+
+ label {
+    display: inline-block;
+    margin-bottom: .5rem;
+    font-size: 14px !important;
+}
+
+.fa-navicon:before, .fa-reorder:before, .fa-bars:before {
+    content: "\f0c9";
+    font-size: 28px;
+}
+
+.page-titles{
+    margin-bottom: 0px ;
+}
+

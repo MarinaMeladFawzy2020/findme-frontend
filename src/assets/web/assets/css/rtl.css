@@ -1,0 +1,115 @@
+/*==== rtl css ====*/
+body{
+	text-align: right !important;
+}
+
+
+.appie-traffic-area.appie-traffic-area-rtl .traffic-thumb {
+	left: 0;
+	right: auto;
+	transform: translateY(-50%) rotateY(-180deg);
+}
+
+
+.appie-traffic-area-rtl .appie-traffic-title{
+	padding-left: 220px;
+	padding-right: 0;
+}
+
+
+.appie-traffic-area-rtl .appie-traffic-service .icon{
+	right: 0;
+	left: auto;
+}
+
+
+
+.appie-faq-area-rtl .faq-accrodion .accrodion .accrodion-title::after,
+.appie-faq-area-rtl .faq-accrodion .accrodion .accrodion-title::before{
+	right: auto;
+	left: 30px;
+}
+
+
+.appie-project-area.appie-project-area-rtl .appie-project-box .appie-project-thumb{
+	left: 70px;
+	right: auto;
+}
+
+
+
+.appie-project-area-rtl .appie-project-content .input-box input{
+	padding-left: 0;
+	padding-right: 30px;
+}
+
+
+.appie-project-area-rtl .appie-project-content .input-box button{
+	margin-left: 0;
+	margin-right: 10px;
+}
+
+
+
+
+
+.appie-header-area-rtl .appie-header-main-menu ul{
+	text-align: right;
+}
+
+
+
+
+
+.appie-header-area-rtl .appie-header-main-menu ul > li .sub-menu{
+	text-align: right;
+}
+
+.appie-hero-area-2 .appie-hero-thumb-3 {
+   
+    left: -60px;
+	right: unset;
+  
+}
+.appie-download-area {
+    background-image: unset;
+  
+}
+.appie-download-area::before {
+
+    left: -150px;
+	right: unset;
+ 
+}
+.appie-download-content ul li a i {
+   padding-right: unset;
+    padding-left: 11px;
+}
+.single-info p{
+	padding-right: 32px;
+	padding-left: unset;
+}
+.single-info p i{
+	right: 0;
+	left: unset;
+}
+.text-right {
+    text-align: left!important;
+}
+.text-left {
+    text-align: right!important;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+

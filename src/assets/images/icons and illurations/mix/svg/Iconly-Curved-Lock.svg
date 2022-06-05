@@ -1,0 +1,8 @@
+<svg id="Iconly_Curved_Lock" data-name="Iconly/Curved/Lock" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+  <rect id="Iconly_Curved_Lock_Background_" data-name="Iconly/Curved/Lock (Background)" width="24" height="24" fill="none"/>
+  <g id="Lock" transform="translate(4.25 2.75)">
+    <path id="Stroke_1" data-name="Stroke 1" d="M9.121,6.653V4.5A4.561,4.561,0,0,0,0,4.484V6.653" transform="translate(3.1)" fill="none" stroke="#25304e" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" stroke-dasharray="0 0"/>
+    <path id="Stroke_3" data-name="Stroke 3" d="M.5,0V2.221" transform="translate(7.16 11.406)" fill="none" stroke="#25304e" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" stroke-dasharray="0 0"/>
+    <path id="Stroke_5" data-name="Stroke 5" d="M0,6.271c0,4.7,1.915,6.272,7.66,6.272s7.661-1.568,7.661-6.272S13.4,0,7.66,0,0,1.568,0,6.271Z" transform="translate(0 6.074)" fill="none" stroke="#25304e" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" stroke-dasharray="0 0"/>
+  </g>
+</svg>
