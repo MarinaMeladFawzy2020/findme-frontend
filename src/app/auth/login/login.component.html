@@ -4,11 +4,11 @@
 
 <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
     <div class="p-fluid p-grid">
-        <label for="inputEmail"> Your Email * </label>
+        <label for="inputEmail"> Your Email <span class="text-danger">*</span></label>
         <div>
             <span class="p-input-icon-left">
                 <i class="pi pi-envelope"></i>
-                <input type="email"  pInputText placeholder="example@mail.com"    formControlName="username" name="username"
+                <input type="email"  pInputText placeholder="example@mail.com" formControlName="username" name="username"
                 [ngClass]="{'border-danger': loginForm.get('username')?.invalid && loginForm.get('username')?.errors &&
                 (loginForm.get('username')?.dirty || loginForm.get('username')?.touched) } " />
             </span>
@@ -22,7 +22,7 @@
     <br>
 
     <div class="p-fluid p-grid ">
-        <label for="inputPassword"> Your Password * </label>
+        <label for="inputPassword"> Your Password <span class="text-danger">*</span></label>
         <div>
             <span class="p-input-icon-left">
                 <i class="pi pi-lock"></i>

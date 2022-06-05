@@ -1,5 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 import { ProfileService } from 'src/app/services/profile.service';
+import { EditprofileComponent } from '../editprofile/editprofile.component';
 
 @Component({
   selector: 'app-viewprofile',
@@ -9,6 +10,7 @@ import { ProfileService } from 'src/app/services/profile.service';
 export class ViewprofileComponent implements OnInit {
 [x:string]:any;
 viewProfile:boolean = false;
+@ViewChild('editprofile') editprofile!: EditprofileComponent;
 
   constructor(private dataApi:ProfileService) { 
     this.UserInfo = sessionStorage.getItem("UserInfo")
@@ -17,35 +19,6 @@ viewProfile:boolean = false;
   }
 
   ngOnInit(): void {
-  //   this.viewProfile = true;
-
-  //   this.dataprofile  = {
-  //     "gardId": 1,
-  //     "gardName": "Masoud Ahmed T",
-  //     "country": "190",
-  //     "city": "Riyadh - الرياض",
-  //     "address": "عبد الحق السهمي",
-  //     "mobCountryCd": "966",
-  //     "mobileNo": "54 080 5491",
-  //     "addCountryCd": "20",
-  //     "addMobileNo": "101717731",
-  //     "createDate": "2022-03-27T00:00:00.000+00:00",
-  //     "createUser": "",
-  //     "updateDate": null,
-  //     "updateUser": null,
-  //     "statusCode": "A",
-  //     "languages": "Arabic",
-  //     "email": "mas.ahmed22@gmail.com",
-  //     "password": "EC6A6536CA304EDF844D1D248A4F08DC",
-  //     "token": "Y5LZfJkDXPMBzEsmXoAo",
-  //     "tokenTimestamp": "1654366034732",
-  //     "enabled": true,
-  //     "username": "mas.ahmed22@gmail.com",
-  //     "authorities": null,
-  //     "accountNonExpired": true,
-  //     "accountNonLocked": true,
-  //     "credentialsNonExpired": true
-  // }
     this.dataApi.getGuardianByID(this.gardId).subscribe(
       Response=> {
         console.log(Response)
@@ -58,6 +31,12 @@ viewProfile:boolean = false;
       }
      );
 
+  }
+
+  editprofiles(){
+    this.editprofile.dataprofile(this.dataprofile);
+      
+    
   }
 
 }

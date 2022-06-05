@@ -1,237 +1,243 @@
 <div class="container-fluid">
-  <div class="page-titles">
-    <ol class="breadcrumb">
-      <li class="breadcrumb-item active">
-        <a href="javascript:void(0)">View Profile</a>
-      </li>
-    </ol>
-  </div>
-
-  <div class="card">
-    <div class="card-body" *ngIf="viewProfile">
-      <div class="row">
-        <div class="col-12 mb-2" style="display: -webkit-inline-box">
-          <div class="col-6 col-sm-4 itemDetails">
-            <span style="display: flex">
-              <div class="col-6">
-                <label class="title"> gardId : </label>
-              </div>
-              <div class="col-6" style="padding: 0 2px">
-                <label> {{ dataprofile.gardId }} </label>
-              </div>
-            </span>
-          </div>
-
-          <div class="col-6 col-sm-4 itemDetails">
-            <span style="display: flex">
-              <div class="col-6">
-                <label class="title"> gardName : </label>
-              </div>
-              <div class="col-6" style="padding: 0 2px">
-                <label> {{ dataprofile.gardName }} </label>
-              </div>
-            </span>
-          </div>
-
-          <div class="col-6 col-sm-4 itemDetails">
-            <span style="display: flex">
-              <div class="col-6">
-                <label class="title"> username : </label>
-              </div>
-              <div class="col-6" style="padding: 0 2px">
-                <label> {{ dataprofile.username }} </label>
-              </div>
-            </span>
-          </div>
-        </div>
+    <div class="page-titles">
+      <ol class="breadcrumb">
+        <li class="breadcrumb-item active">
+          <a href="javascript:void(0)">View Profile</a>
+        </li>
+      </ol>
+    </div>
+  
+      <div class="actions" style="margin-top: -45px;">
+          <p-button label="editprofile" type="submit" icon="pi pi-user-edit" styleClass="p-button-warning btnNew"  
+          [style]="{'margin-left': '.5em'}"   (click)="editprofiles()"  data-toggle="modal" data-target="#editprofile" ></p-button>
+          <app-editprofile #editprofile></app-editprofile>
       </div>
-
-      <div class="row">
-        <div class="col-12 mb-2" style="display: -webkit-inline-box">
-          <div class="col-6 col-sm-4 itemDetails">
-            <span style="display: flex">
-              <div class="col-6">
-                <label class="title"> address : </label>
-              </div>
-              <div class="col-6" style="padding: 0 2px">
-                <label> {{ dataprofile.address }} </label>
-              </div>
-            </span>
-          </div>
-
-          <div class="col-6 col-sm-4 itemDetails">
-            <span style="display: flex">
-              <div class="col-6">
-                <label class="title"> mobCountryCd : </label>
-              </div>
-              <div class="col-6" style="padding: 0 2px">
-                <label> {{ dataprofile.mobCountryCd }} </label>
-              </div>
-            </span>
-          </div>
-
-          <div class="col-6 col-sm-4 itemDetails">
-            <span style="display: flex">
-              <div class="col-6">
-                <label class="title"> mobileNo : </label>
-              </div>
-              <div class="col-6" style="padding: 0 2px">
-                <label> {{ dataprofile.mobileNo }} </label>
-              </div>
-            </span>
-          </div>
-        </div>
-      </div>
-
-      <div class="row">
-        <div class="col-12 mb-2" style="display: -webkit-inline-box">
-          <div class="col-6 col-sm-4 itemDetails">
-            <span style="display: flex">
-              <div class="col-6">
-                <label class="title"> addCountryCd : </label>
-              </div>
-              <div class="col-6" style="padding: 0 2px">
-                <label> {{ dataprofile.addCountryCd }} </label>
-              </div>
-            </span>
-          </div>
-
-          <div class="col-6 col-sm-4 itemDetails">
-            <span style="display: flex">
-              <div class="col-6">
-                <label class="title"> country : </label>
-              </div>
-              <div class="col-6" style="padding: 0 2px">
-                <label> {{ dataprofile.country }} </label>
-              </div>
-            </span>
-          </div>
-
+  
+    <div class="card">
+      <div class="card-body" *ngIf="viewProfile">
+        <div class="row">
           <div class="col-12 mb-2" style="display: -webkit-inline-box">
             <div class="col-6 col-sm-4 itemDetails">
               <span style="display: flex">
                 <div class="col-6">
-                  <label class="title"> statusCode : </label>
+                  <label class="title"> gardId : </label>
                 </div>
                 <div class="col-6" style="padding: 0 2px">
-                  <label> {{ dataprofile.statusCode }} </label>
+                  <label> {{ dataprofile.gardId }} </label>
+                </div>
+              </span>
+            </div>
+  
+            <div class="col-6 col-sm-4 itemDetails">
+              <span style="display: flex">
+                <div class="col-6">
+                  <label class="title"> gardName : </label>
+                </div>
+                <div class="col-6" style="padding: 0 2px">
+                  <label> {{ dataprofile.gardName }} </label>
+                </div>
+              </span>
+            </div>
+  
+            <div class="col-6 col-sm-4 itemDetails">
+              <span style="display: flex">
+                <div class="col-6">
+                  <label class="title"> username : </label>
+                </div>
+                <div class="col-6" style="padding: 0 2px">
+                  <label> {{ dataprofile.username }} </label>
                 </div>
               </span>
             </div>
           </div>
         </div>
-      </div>
-
+  
+        <div class="row">
+          <div class="col-12 mb-2" style="display: -webkit-inline-box">
+            <div class="col-6 col-sm-4 itemDetails">
+              <span style="display: flex">
+                <div class="col-6">
+                  <label class="title"> address : </label>
+                </div>
+                <div class="col-6" style="padding: 0 2px">
+                  <label> {{ dataprofile.address }} </label>
+                </div>
+              </span>
+            </div>
+  
+            <div class="col-6 col-sm-4 itemDetails">
+              <span style="display: flex">
+                <div class="col-6">
+                  <label class="title"> mobCountryCd : </label>
+                </div>
+                <div class="col-6" style="padding: 0 2px">
+                  <label> {{ dataprofile.mobCountryCd }} </label>
+                </div>
+              </span>
+            </div>
+  
+            <div class="col-6 col-sm-4 itemDetails">
+              <span style="display: flex">
+                <div class="col-6">
+                  <label class="title"> mobileNo : </label>
+                </div>
+                <div class="col-6" style="padding: 0 2px">
+                  <label> {{ dataprofile.mobileNo }} </label>
+                </div>
+              </span>
+            </div>
+          </div>
+        </div>
+  
+        <div class="row">
+          <div class="col-12 mb-2" style="display: -webkit-inline-box">
+            <div class="col-6 col-sm-4 itemDetails">
+              <span style="display: flex">
+                <div class="col-6">
+                  <label class="title"> addCountryCd : </label>
+                </div>
+                <div class="col-6" style="padding: 0 2px">
+                  <label> {{ dataprofile.addCountryCd }} </label>
+                </div>
+              </span>
+            </div>
+  
+            <div class="col-6 col-sm-4 itemDetails">
+              <span style="display: flex">
+                <div class="col-6">
+                  <label class="title"> country : </label>
+                </div>
+                <div class="col-6" style="padding: 0 2px">
+                  <label> {{ dataprofile.country }} </label>
+                </div>
+              </span>
+            </div>
+  
+              <div class="col-6 col-sm-4 itemDetails">
+                <span style="display: flex">
+                  <div class="col-6">
+                    <label class="title"> statusCode : </label>
+                  </div>
+                  <div class="col-6" style="padding: 0 2px">
+                    <label> {{ dataprofile.statusCode }} </label>
+                  </div>
+                </span>
+              </div>
+            
+          </div>
+        </div>
+  
+        <div class="row">
+          <div class="col-12 mb-2" style="display: -webkit-inline-box">
+            <div class="col-6 col-sm-4 itemDetails">
+              <span style="display: flex">
+                <div class="col-6">
+                  <label class="title"> createUser : </label>
+                </div>
+                <div class="col-6" style="padding: 0 2px">
+                  <label> {{ dataprofile.createUser }} </label>
+                </div>
+              </span>
+            </div>
+  
+            <div class="col-6 col-sm-4 itemDetails">
+              <span style="display: flex">
+                <div class="col-6">
+                  <label class="title"> createDate : </label>
+                </div>
+                <div class="col-6" style="padding: 0 2px">
+                  <label> {{ dataprofile.createDate | date: "medium" }} </label>
+                </div>
+              </span>
+            </div>
+  
+            <div class="col-6 col-sm-4 itemDetails">
+              <span style="display: flex">
+                <div class="col-6">
+                  <label class="title"> updateDate : </label>
+                </div>
+                <div class="col-6" style="padding: 0 2px">
+                  <label> {{ dataprofile.updateDate }} </label>
+                </div>
+              </span>
+            </div>
+          </div>
+        </div>
+  
+        <div class="row">
+          <div class="col-12 mb-2" style="display: -webkit-inline-box">
+            <div class="col-6 col-sm-4 itemDetails">
+              <span style="display: flex">
+                <div class="col-6">
+                  <label class="title"> updateUser : </label>
+                </div>
+                <div class="col-6" style="padding: 0 2px">
+                  <label> {{ dataprofile.updateUser }} </label>
+                </div>
+              </span>
+            </div>
+  
+            <div class="col-6 col-sm-4 itemDetails">
+              <span style="display: flex">
+                <div class="col-6">
+                  <label class="title"> languages : </label>
+                </div>
+                <div class="col-6" style="padding: 0 2px">
+                  <label> {{ dataprofile.languages }} </label>
+                </div>
+              </span>
+            </div>
+  
+            <div class="col-6 col-sm-4 itemDetails">
+              <span style="display: flex">
+                <div class="col-6">
+                  <label class="title"> addMobileNo : </label>
+                </div>
+                <div class="col-6" style="padding: 0 2px">
+                  <label> {{ dataprofile.addMobileNo }} </label>
+                </div>
+              </span>
+            </div>
+          </div>
+        </div>
+     
+  
       <div class="row">
         <div class="col-12 mb-2" style="display: -webkit-inline-box">
           <div class="col-6 col-sm-4 itemDetails">
             <span style="display: flex">
               <div class="col-6">
-                <label class="title"> createUser : </label>
+                <label class="title"> authorities : </label>
               </div>
               <div class="col-6" style="padding: 0 2px">
-                <label> {{ dataprofile.createUser }} </label>
+                <label> {{ dataprofile.authorities }} </label>
               </div>
             </span>
           </div>
-
+  
           <div class="col-6 col-sm-4 itemDetails">
             <span style="display: flex">
               <div class="col-6">
-                <label class="title"> createDate : </label>
+                <label class="title"> accountNonExpired : </label>
               </div>
               <div class="col-6" style="padding: 0 2px">
-                <label> {{ dataprofile.createDate | date: "medium" }} </label>
+                <label> {{ dataprofile.accountNonExpired }} </label>
               </div>
             </span>
           </div>
-
+  
           <div class="col-6 col-sm-4 itemDetails">
             <span style="display: flex">
               <div class="col-6">
-                <label class="title"> updateDate : </label>
+                <label class="title"> accountNonLocked : </label>
               </div>
               <div class="col-6" style="padding: 0 2px">
-                <label> {{ dataprofile.updateDate }} </label>
+                <label> {{ dataprofile.accountNonLocked }} </label>
               </div>
             </span>
           </div>
-        </div>
-      </div>
-
-      <div class="row">
-        <div class="col-12 mb-2" style="display: -webkit-inline-box">
-          <div class="col-6 col-sm-4 itemDetails">
-            <span style="display: flex">
-              <div class="col-6">
-                <label class="title"> updateUser : </label>
-              </div>
-              <div class="col-6" style="padding: 0 2px">
-                <label> {{ dataprofile.updateUser }} </label>
-              </div>
-            </span>
-          </div>
-
-          <div class="col-6 col-sm-4 itemDetails">
-            <span style="display: flex">
-              <div class="col-6">
-                <label class="title"> languages : </label>
-              </div>
-              <div class="col-6" style="padding: 0 2px">
-                <label> {{ dataprofile.languages }} </label>
-              </div>
-            </span>
-          </div>
-
-          <div class="col-6 col-sm-4 itemDetails">
-            <span style="display: flex">
-              <div class="col-6">
-                <label class="title"> addMobileNo : </label>
-              </div>
-              <div class="col-6" style="padding: 0 2px">
-                <label> {{ dataprofile.addMobileNo }} </label>
-              </div>
-            </span>
-          </div>
-        </div>
-      </div>
-   
-
-    <div class="row">
-      <div class="col-12 mb-2" style="display: -webkit-inline-box">
-        <div class="col-6 col-sm-4 itemDetails">
-          <span style="display: flex">
-            <div class="col-6">
-              <label class="title"> authorities : </label>
-            </div>
-            <div class="col-6" style="padding: 0 2px">
-              <label> {{ dataprofile.authorities }} </label>
-            </div>
-          </span>
-        </div>
-
-        <div class="col-6 col-sm-4 itemDetails">
-          <span style="display: flex">
-            <div class="col-6">
-              <label class="title"> accountNonExpired : </label>
-            </div>
-            <div class="col-6" style="padding: 0 2px">
-              <label> {{ dataprofile.accountNonExpired }} </label>
-            </div>
-          </span>
-        </div>
-
-        <div class="col-6 col-sm-4 itemDetails">
-          <span style="display: flex">
-            <div class="col-6">
-              <label class="title"> accountNonLocked : </label>
-            </div>
-            <div class="col-6" style="padding: 0 2px">
-              <label> {{ dataprofile.accountNonLocked }} </label>
-            </div>
-          </span>
         </div>
       </div>
     </div>
   </div>
-</div>
+  

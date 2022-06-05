@@ -18,8 +18,8 @@ export class ProfileService {
     return this.http.get(this.URL+`guardian?email/${guardianEmail}`);
   }
 
-  updateGuardian(guardianId:any , updatePassword:boolean): Observable<any> {
-    return this.http.get(this.URL+`guardian/${guardianId}?updatePassword=${updatePassword}`);
+  updateGuardian(guardianId:any , _f:any, updatePassword:boolean): Observable<any> {
+    return this.http.put(this.URL+`guardian/${guardianId}?updatePassword=${updatePassword}` , _f);
   }
 
 

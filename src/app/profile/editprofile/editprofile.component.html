@@ -1,0 +1,114 @@
+
+  <div class="modal fade" id="editprofile" tabindex="-1" role="dialog" aria-labelledby="editprofileLabel"
+  aria-hidden="true" data-backdrop="static" data-keyboard="false"  role="dialog" >
+  
+  <div class="modal-dialog modal-xl" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h6 class="modal-title" id="editprofileLabel">Edit Profile</h6>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <form [formGroup]="myForm" (ngSubmit)="onSubmit()">
+  
+      <div class="modal-body" *ngIf="edit">
+            <div class="form-row">
+                {{this.data | json}}
+
+
+            </div>
+
+            <div class="row  mb-3">
+
+                <div class="col-2">
+                    <label for="inputtext1"> gardId <span class="text-danger">*</span></label>
+                    <div>
+                      <input type="text"  pInputText  [(ngModel)]="this.data.gardId"  formControlName="gardId" name="gardId"
+                      [ngClass]="{'border-danger': myForm.get('gardId')?.invalid && myForm.get('gardId')?.errors &&
+                      (myForm.get('gardId')?.dirty || myForm.get('gardName')?.touched) } " />
+                    </div>
+                    <div *ngIf="myForm.get('gardId')?.invalid && myForm.get('gardId')?.errors && (myForm.get('gardId')?.dirty || myForm.get('gardId')?.touched)">
+                        <small class="form-text text-danger mt-1" *ngIf="myForm.controls['gardId']?.errors?.['required']"> gardId is required.</small>
+                    </div>
+                  </div>
+
+                <div class="col-2">
+                  <label for="inputtext1"> Full Name <span class="text-danger">*</span></label>
+                  <div>
+                    <input type="text"  pInputText  [(ngModel)]="this.data.gardName"  formControlName="gardName" name="gardName"
+                    [ngClass]="{'border-danger': myForm.get('gardName')?.invalid && myForm.get('gardName')?.errors &&
+                    (myForm.get('gardName')?.dirty || myForm.get('gardName')?.touched) } " />
+                  </div>
+                  <div *ngIf="myForm.get('gardName')?.invalid && myForm.get('gardName')?.errors && (myForm.get('gardName')?.dirty || myForm.get('gardName')?.touched)">
+                      <small class="form-text text-danger mt-1" *ngIf="myForm.controls['gardName']?.errors?.['required']"> gardName is required.</small>
+                  </div>
+                </div>
+                <div class="col-2">
+                  <label for="inputtext2"> createUser <span class="text-danger">*</span></label>
+                  <div>
+                    <input type="text"  pInputText  [(ngModel)]="this.data.createUser"   formControlName="createUser" name="createUser"
+                    [ngClass]="{'border-danger': myForm.get('createUser')?.invalid && myForm.get('createUser')?.errors &&
+                    (myForm.get('createUser')?.dirty || myForm.get('createUser')?.touched) } " />
+                  </div>
+                  <div *ngIf="myForm.get('createUser')?.invalid && myForm.get('createUser')?.errors && (myForm.get('createUser')?.dirty || myForm.get('createUser')?.touched)">
+                      <small class="form-text text-danger mt-1" *ngIf="myForm.controls['createUser']?.errors?.['required']"> createUser is required.</small>
+                  </div>
+      
+                </div>
+
+                <div class="col-2">
+                    <label for="inputEmail"> Your Email <span class="text-danger">*</span></label>
+                    <div>
+                            <input type="email"  pInputText  [(ngModel)]="this.data.username"    formControlName="email" name="email"
+                            [ngClass]="{'border-danger': myForm.get('email')?.invalid && myForm.get('email')?.errors &&
+                            (myForm.get('email')?.dirty || myForm.get('email')?.touched) } " />
+                    </div>
+                    <div *ngIf="myForm.get('email')?.invalid && myForm.get('email')?.errors && (myForm.get('email')?.dirty || myForm.get('email')?.touched)">
+                        <small class="form-text text-danger mt-1" *ngIf="myForm.controls['email']?.errors?.['required']"> Email is required.</small>
+                        <small class="form-text text-danger mt-1" *ngIf="myForm.controls['email']?.errors?.['email']"> Email is Not Valid.</small>
+                    </div>
+                   
+                </div>
+
+                <div class="col-2">
+                    <label for="inputtext2"> mobileNo <span class="text-danger">*</span></label>
+                    <div>
+                            <input type="text"  pInputText  [(ngModel)]="this.data.mobileNo"     formControlName="mobileNo" name="mobileNo" maxlength="11"  (countryChange)="oncountryChange($event)"
+                            [ngClass]="{'border-danger': myForm.get('mobileNo')?.invalid && myForm.get('mobileNo')?.errors &&
+                            (myForm.get('mobileNo')?.dirty || myForm.get('mobileNo')?.touched) } " />
+                    </div>
+                    <div *ngIf="myForm.get('mobileNo')?.invalid && myForm.get('mobileNo')?.errors && (myForm.get('mobileNo')?.dirty || myForm.get('mobileNo')?.touched)">
+                        <small class="form-text text-danger mt-1" *ngIf="myForm.controls['mobileNo']?.errors?.['required']"> mobileNo is required.</small>
+                    </div>
+        
+                    <div *ngIf="myForm.get('mobileNo')?.invalid && myForm.get('mobileNo')?.errors && (myForm.get('mobileNo')?.dirty || myForm.get('mobileNo')?.touched)">
+                      <small class="form-text text-danger mt-1" *ngIf="myForm.controls['mobileNo']?.errors?.['pattern']"> mobileNo is not Valid.</small>
+                  </div>
+      
+                  
+      
+                  </div>
+
+              </div>
+
+           
+
+                
+      
+    
+      
+   
+            
+    
+      </div>
+  
+      <div class="modal-footer">
+        <button type="submit" class="btn btn-success" [disabled]="myForm.invalid"><i class="pi pi-check"></i> Save</button>
+        <button type="button" class="btn btn-danger" data-dismiss="modal" ><i class="pi pi-times"></i> Cancel</button>
+      </div>
+    </form>
+  
+    </div>
+  </div>
+  </div>
