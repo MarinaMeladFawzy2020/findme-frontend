@@ -10,10 +10,12 @@
 
 body{
     font-family: "Montserrat";
+    font-size: 14px !important;
 }
 .dark-red{
     background: #B92056;
     color: #fff;
+    font-size: 14px !important;
 }
 
 .dark-blue{
@@ -56,4 +58,7 @@ font-weight: 600;
 .p-inputtext{
     font-size: 14px !important;
     height: 35px !important;
+}
+.p-input-icon-left>i:first-of-type {
+    font-size: 14px !important;
 }
