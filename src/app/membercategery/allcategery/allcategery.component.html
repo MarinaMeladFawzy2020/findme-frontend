@@ -7,97 +7,32 @@
 </div>
 
 <div class="row">
+   
     
     <div class="col-xl-8">
         <div class="card">
             <div class="card-body">
                 <div class="profile-tab">
-                    <div class="custom-tab-1">
-                        <ul class="nav nav-tabs">
-                            <li class="nav-item"><a href="#all" data-toggle="tab" class="nav-link active show"> <span class="icon-All icomoon" ></span> All</a>
-                            </li>
-                            <li class="nav-item"><a href="#family" data-toggle="tab" class="nav-link  show"> <span class="icon-family icomoon" ></span> Family</a>
-                            </li>
-                            <li class="nav-item"><a href="#Pets" data-toggle="tab" class="nav-link"> <span class="icon-pets icomoon" ></span>  Pets</a>
-                            </li>
-                            <li class="nav-item"><a href="#staff" data-toggle="tab" class="nav-link"> <span class="icon-staff icomoon" ></span> Staff</a>
-                            </li>
-                        </ul>
-                        <div class="tab-content">
-                            <div id="all" class="tab-pane fade active show">
-                                <div class="row mt-5">
-                                    <div class="col-sm-6">
-                                        <a href="">
-                                            <div class="pink-card member-card p-3 d-flex">
-                                                <div class="border border-primary rounded-circle p-3 mr-3 in-shadow">
-                                                    <span class="icon-girl icomoon" ></span> 
-                                                </div>
-                                                <h6> member name </h6>
-                                            </div>
-                                        </a>
-                                    
-                                    </div>
-                                    <div class="col-sm-6">
-                                        <a href="">
-                                            <div class="blue-card member-card p-3 d-flex">
-                                                <div class="border border-primary rounded-circle p-3 mr-3 in-shadow">
-                                                    <span class="icon-boy icomoon" ></span> 
-                                                </div>
-                                                <h6> member name  </h6>
-                                            </div>
-                                        </a>
-                                    </div>
-                                </div>
-                                
-                            </div>
-                            <div id="family" class="tab-pane fade active show">
-                                <div class="row mt-5">
-                                    <div class="col-sm-6">
-                                        <a href="">
-                                            <div class="pink-card member-card p-3 d-flex">
-                                                <div class="border border-primary rounded-circle p-3 mr-3 in-shadow">
-                                                    <span class="icon-girl icomoon" ></span> 
-                                                </div>
-                                                <h6> member name </h6>
-                                            </div>
-                                        </a>
-                                    </div>
-                                    <div class="col-sm-6">
-                                        <a href="">
-                                            <div class="blue-card member-card p-3 d-flex">
-                                                <div class="border border-primary rounded-circle p-3 mr-3 in-shadow">
-                                                    <span class="icon-boy icomoon" ></span> 
-                                                </div>
-                                                <h6> member name </h6>
-                                            </div>
-                                        </a>
-                                    </div>
-                                </div>
-                                
-                            </div>
-                            <div id="Pets" class="tab-pane fade">
-                                <div class="no-data text-center mt-5">
-                                    <img src="assets/web/images/svg/2/no data.svg" alt="">
-                                    <br>
-                                    No Data
-                                </div>
-                                
-                            </div>
-                            <div id="staff" class="tab-pane fade">
-                                <div class="no-data text-center mt-5">
-                                    <img src="assets/web/images/svg/2/no data.svg" alt="">
-                                    <br>
-                                    No Data
-                                </div>
-                            </div>
-                            
-                        </div>
-                    </div>
-            
-                </div>
-            </div>
-        </div>
-    </div>
+
+    <p-tabView  (onChange)="handleChange($event)" *ngIf="checkdata" >
+        <p-tabPanel  *ngFor="let cat of allCategory ; let i = index"  [header]="cat.mc_name" [selected]="activetabs == i">
+            <ng-template pTemplate="header">
+                <i class="fa fa-users"></i>
+                
+                <span>{{cat.mc_name}}</span>
+                <span>{{cat.mc_id}}</span>
+                {{activetabs}}
+              </ng-template>
+
+            <ng-template pTemplate="content">
+                <app-familycategery  #familycategery [catInput]="cat"> </app-familycategery>
+            </ng-template>
+        </p-tabPanel>
+    
+    </p-tabView>
+
+                </div></div></div></div>
+
 
 
 

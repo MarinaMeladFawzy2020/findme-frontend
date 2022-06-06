@@ -66,3 +66,79 @@ font-weight: 600;
     padding: 8px !important;
     font-size: 12px !important;
 }
+
+.p-tabview .p-tabview-nav li.p-highlight .p-tabview-nav-link{
+    border: 0;
+    box-shadow: 5px -4px 23px -5px rgb(0 0 0 / 72%) inset;
+    -webkit-box-shadow: 5px -4px 23px -5px rgb(0 0 0 / 72%) inset;
+    -moz-box-shadow: 5px -4px 23px -5px rgba(0,0,0,0.72) inset !important;
+    color: #fff !important;
+    border-radius: 10px;
+    background: #CD3067;
+    border-bottom: 0.2px solid #B92056;
+    color: #B92056;
+    box-shadow: none !important;
+
+}
+.p-tabview .p-tabview-nav .p-tabview-ink-bar{
+    background-color:#dee2e6 !important;
+    box-shadow: none !important;
+}
+
+.p-tabview .p-tabview-nav li.p-highlight .pi , .p-tabview .p-tabview-nav li.p-highlight .fa{
+    margin-right: 10px;
+    color: #fff;
+}
+
+.p-tabview .p-tabview-nav .pi , .p-tabview .p-tabview-nav .fa{
+    margin-right: 10px;
+    color: #828690;
+}
+
+.member-card {
+    height: 100px;
+    display: inline-block;
+    background-color: #FFEEF4;
+    border: solid 1px #F0C9D7;
+    border-radius: 10px;
+    border: solid 1px #dee2e6;
+}
+
+.pink-card
+{
+  background-color: #FFEEF4;
+}
+
+.blue-card
+{
+  background-color: #D7F5FE;
+}
+
+.member-card:hover{
+  border:solid 1px #828690;
+  
+}
+
+.member-card .border {
+    /* background: #ebebec; */
+    width: 56%;
+    height: 85%;
+}
+.in-shadow {
+    height: fit-content;
+    background-color: #fff;
+    border: solid 1px #eee !important;
+    box-shadow: -32px 15px 48px -35px rgb(186 186 186 / 90%) inset;
+    -webkit-box-shadow: -32px 15px 48px -35px rgb(186 186 186 / 90%) inset;
+    -moz-box-shadow: -32px 15px 48px -35px rgba(186,186,186,0.9) inset;
+}
+
+.breadcrumb{
+    background: none;
+    margin-bottom: 0;
+}
+.breadcrumb-item.active a{
+    color: #b92056;
+    font-size: 18px;
+    font-weight: bold;
+}
