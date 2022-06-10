@@ -142,3 +142,19 @@ font-weight: 600;
     font-size: 18px;
     font-weight: bold;
 }
+
+.breadcrumb-item a{
+    color: #25304e;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.breadcrumb-item+.breadcrumb-item::before{
+    font-size: 18px ;
+}
+.copyright{
+    font-size: 14px;
+    text-align: center;
+    font-weight: bold;
+    background: #f4f6fa;
+}

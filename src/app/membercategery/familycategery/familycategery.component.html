@@ -3,25 +3,27 @@
 
 <div class="row mt-2 mb-2" >
 <div style=" display: contents;">
-    <div class="col-sm-4 mb-2" *ngFor="let cat of Category">
-        <a href="" style=" width: -webkit-fill-available;">
+    <div class="col-sm-3 mb-2" *ngFor="let cat of Category ; let i = index">
+        <a style=" width: -webkit-fill-available;" (click)="getDetails(Category[i])">
             <div class="pink-card member-card p-3 d-flex" *ngIf="cat.gender == 'F'">
-              <div class="col-4">
-                <div class="">
-                    <span class="icon-girl icomoon" ></span> 
-                </div>
+              <div class="col-4 icon-image">
+                    <span class="icon-girl icomoon" style="font-size: 40px;"></span> 
               </div>
               <div class="col-8">
-                <h6> {{cat.memberName}} </h6>
-            </div>
+                <h6 class="title"> {{cat.memberName}} </h6>
+              </div>
             </div>
 
             <div class="blue-card member-card p-3 d-flex"  *ngIf="cat.gender == 'M'">
-                <div class="border border-primary rounded-circle p-3 mr-3 in-shadow">
-                <span class="icon-boy icomoon" ></span> 
-            </div>
-            <h6> {{cat.memberName}} </h6>
-        </div>
+                  <div class="col-4 icon-image">
+                    <span class="icon-boy icomoon" style="font-size: 40px;"></span> 
+                 </div>
+                <div class="col-8">
+                  <h6 class="title"> {{cat.memberName}} </h6>
+              </div>
+              </div>
+
+       
         </a>
     
     </div>

@@ -6,12 +6,18 @@ import { AllcategeryComponent } from './allcategery/allcategery.component';
 import { FamilycategeryComponent } from './familycategery/familycategery.component';
 import { PrimengModule } from '../primeng/primeng.module';
 import { SharedModule } from '../shared/shared.module';
+import { DetailscategeryComponent } from './detailscategery/detailscategery.component';
+import { AddmemberComponent } from './addmember/addmember.component';
+import { EditmemberComponent } from './editmember/editmember.component';
 
 
 @NgModule({
   declarations: [
     AllcategeryComponent,
-    FamilycategeryComponent
+    FamilycategeryComponent,
+    DetailscategeryComponent,
+    AddmemberComponent,
+    EditmemberComponent
   ],
   imports: [
     CommonModule,

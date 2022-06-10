@@ -14,6 +14,10 @@
       </div>
   
     <div class="card">
+      <div class="card-body" *ngIf="checkNoFound == true">
+        <span class="emptyMessg"> {{this.emptyMessg}}</span>
+       </div>
+       
       <div class="card-body" *ngIf="viewProfile">
         <div class="row">
           <div class="col-12 mb-2" style="display: -webkit-inline-box">

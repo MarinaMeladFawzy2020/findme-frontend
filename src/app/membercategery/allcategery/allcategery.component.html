@@ -6,10 +6,18 @@
     </ol>
 </div>
 
+<div class="actions" style="margin-top: -45px;">
+    <p-button label="Add Member" type="submit" icon="pi pi-plus" styleClass="p-button-success btnNew"  
+    [style]="{'margin-left': '.5em'}"   (click)="addMember()"  data-toggle="modal" data-target="#addMember" ></p-button>
+
+    <app-addmember></app-addmember>
+
+</div>
+
 <div class="row">
    
     
-    <div class="col-xl-8">
+    <div class="col-xl-12">
         <div class="card">
             <div class="card-body">
                 <div class="profile-tab">
@@ -20,8 +28,8 @@
                 <i class="fa fa-users"></i>
                 
                 <span>{{cat.mc_name}}</span>
-                <span>{{cat.mc_id}}</span>
-                {{activetabs}}
+                <!-- <span>{{cat.mc_id}}</span>
+                {{activetabs}} -->
               </ng-template>
 
             <ng-template pTemplate="content">
@@ -40,7 +48,7 @@
 
 
 
-    <div class="col-xl-4">
+    <!-- <div class="col-xl-4">
         <div class="card">
             <div class="card-body">
                 <div class="mapouter"><div class="gmap_canvas"><iframe width="300" height="200" id="gmap_canvas" src="https://maps.google.com/maps?q=24211%20mekka&t=&z=13&ie=UTF8&iwloc=&output=embed" 
@@ -71,7 +79,7 @@
                 </div>
                 
             
-            </div>
+            </div> -->
         </div>
 
 

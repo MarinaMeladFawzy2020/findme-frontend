@@ -37,4 +37,7 @@ checkdata:boolean=false;
   
     }
 
+    addMember(){
+      
+    }
 }

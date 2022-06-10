@@ -1,4 +1,5 @@
 import { AfterViewInit, Component, Input, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { MemberlistService } from 'src/app/services/memberlist.service';
 
 @Component({
@@ -10,7 +11,7 @@ export class FamilycategeryComponent implements OnInit  {
   @Input() catInput! :any;
   [x:string]:any;
 
-  constructor(private dataApi: MemberlistService) {
+  constructor(private dataApi: MemberlistService , private router : Router) {
    }
 
   ngOnInit(): void {
@@ -44,4 +45,9 @@ export class FamilycategeryComponent implements OnInit  {
     });
   }
 
+  getDetails(_f:any){
+    console.log(_f);
+    this.router.navigate([`MemberList/${_f.fmId}`]);
+
+  }
 }

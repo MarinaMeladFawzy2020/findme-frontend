@@ -11,3 +11,11 @@
 .actions{
     float: right;
 }
+
+.emptyMessg{
+    font-size: 18px;
+    color: #a33;
+    text-align: center;
+    margin-left: 40%;
+    font-weight: 800;
+}

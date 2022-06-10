@@ -1,0 +1,116 @@
+<!-- <button type="button" class="btn btn-success btnNew mt-1 ml-1" data-toggle="modal" data-target="#addMember" title="addMember" >
+    <i class="pi pi-plus"></i> Add Member
+  </button>
+   -->
+  <div class="modal fade" id="addMember" tabindex="-1" role="dialog" aria-labelledby="addMemberLabel"
+  aria-hidden="true" data-backdrop="static" data-keyboard="false"  role="dialog" >
+  
+  <div class="modal-dialog modal-xl" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h6 class="modal-title" id="addMemberLabel"> Add Member</h6>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <form [formGroup]="myForm" (ngSubmit)="onSubmit()">
+  
+      <div class="modal-body">
+            <div class="form-row">
+            
+        
+            <div class="form-group col-md-3">
+                <label for="memberName">memberName <span class="text-danger">*</span> </label>
+                <input type="text" formControlName="memberName"  class="form-control" id="memberName" 
+                [ngClass]="{'border-danger': myForm.get('memberName')?.invalid && myForm.get('memberName')?.errors &&
+                (myForm.get('memberName')?.dirty || myForm.get('memberName')?.touched)}" >
+                <div *ngIf="myForm.get('memberName')?.invalid && myForm.get('memberName')?.errors && (myForm.get('memberName')?.dirty || myForm.get('memberName')?.touched)">
+                    <div class="form-text text-danger mt-1" *ngIf="myForm.controls['memberName']?.errors?.['required']"> memberName is required.</div>
+                    </div>
+                </div>
+            
+                  
+              <div class="form-group col-md-3">
+                <label for="age">age <span class="text-danger">*</span> </label>
+                <input type="text" formControlName="age"  class="form-control" id="age" 
+                [ngClass]="{'border-danger': myForm.get('age')?.invalid && myForm.get('age')?.errors &&
+                (myForm.get('age')?.dirty || myForm.get('age')?.touched)}" >
+                
+                <div *ngIf="myForm.get('age')?.invalid && myForm.get('age')?.errors && (myForm.get('age')?.dirty || myForm.get('age')?.touched)">
+                    <div class="form-text text-danger mt-1" *ngIf="myForm.controls['age']?.errors?.['required']"> age is required.</div>
+                 </div>
+              </div>
+            
+
+              <div class="form-group col-md-3">
+                <label for="gender">gender <span class="text-danger">*</span> </label>
+                <input type="text" formControlName="gender"  class="form-control" id="gender" 
+                [ngClass]="{'border-danger': myForm.get('gender')?.invalid && myForm.get('gender')?.errors &&
+                (myForm.get('gender')?.dirty || myForm.get('gender')?.touched)}" >
+                
+                <div *ngIf="myForm.get('gender')?.invalid && myForm.get('gender')?.errors && (myForm.get('gender')?.dirty || myForm.get('gender')?.touched)">
+                    <div class="form-text text-danger mt-1" *ngIf="myForm.controls['gender']?.errors?.['required']"> gender is required.</div>
+                 </div>
+              </div>
+
+              <div class="form-group col-md-3">
+                <label for="bloodType">bloodType <span class="text-danger">*</span> </label>
+                <input type="text" formControlName="bloodType"  class="form-control" id="bloodType" 
+                [ngClass]="{'border-danger': myForm.get('bloodType')?.invalid && myForm.get('bloodType')?.errors &&
+                (myForm.get('bloodType')?.dirty || myForm.get('bloodType')?.touched)}" >
+                
+                <div *ngIf="myForm.get('bloodType')?.invalid && myForm.get('bloodType')?.errors && (myForm.get('bloodType')?.dirty || myForm.get('bloodType')?.touched)">
+                    <div class="form-text text-danger mt-1" *ngIf="myForm.controls['bloodType']?.errors?.['required']"> bloodType is required.</div>
+                 </div>
+              </div>
+
+              <div class="form-group col-md-3">
+                <label for="allergies">allergies <span class="text-danger">*</span> </label>
+                <input type="text" formControlName="allergies"  class="form-control" id="allergies" 
+                [ngClass]="{'border-danger': myForm.get('allergies')?.invalid && myForm.get('allergies')?.errors &&
+                (myForm.get('allergies')?.dirty || myForm.get('allergies')?.touched)}" >
+                
+                <div *ngIf="myForm.get('allergies')?.invalid && myForm.get('allergies')?.errors && (myForm.get('allergies')?.dirty || myForm.get('allergies')?.touched)">
+                    <div class="form-text text-danger mt-1" *ngIf="myForm.controls['allergies']?.errors?.['required']"> allergies is required.</div>
+                 </div>
+              </div>
+
+             
+
+              <div class="form-group col-md-3">
+                <label for="languages">languages</label>
+                <input type="text" formControlName="languages"  class="form-control" id="languages" placeholder="">
+              </div>
+  
+              <div class="form-group ">
+              <label for="healthInfo">healthInfo</label>
+              <textarea  class="form-control" formControlName="healthInfo"  [rows]="2" [cols]="1000" style="height: 50px !important"
+              pInputTextarea [autoResize]="autoResize "></textarea>
+         
+            </div>
+
+            
+              
+        
+ 
+        
+            
+  
+              </div>
+  
+           
+  
+  
+  
+    
+      </div>
+  
+      <div class="modal-footer">
+        <button type="submit" class="btn btn-success" [disabled]="myForm.invalid"><i class="pi pi-check"></i> Save</button>
+        <button type="button" class="btn btn-danger" data-dismiss="modal" (click)="reset()"><i class="pi pi-times"></i> Cancel</button>
+      </div>
+    </form>
+  
+    </div>
+  </div>
+  </div>

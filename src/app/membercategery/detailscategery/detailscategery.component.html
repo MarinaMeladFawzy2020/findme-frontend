@@ -1,0 +1,175 @@
+<div class="container-fluid">
+  <div class="page-titles">
+    <ol class="breadcrumb">
+      <li class="breadcrumb-item ">
+        <a routerLink="/MemberList">Member List</a>
+      </li>
+      <li class="breadcrumb-item active">
+        <a href="javascript:void(0)">Member Details</a>
+      </li>
+    </ol>
+  </div>
+
+  <div class="row">
+    <div class="col-xl-12" >
+      <div class="card">
+        <div class="card-body" *ngIf="checkNoFound == true">
+         <span class="emptyMessg"> {{this.emptyMessg}}</span>
+        </div>
+
+        <div class="card-body" *ngIf="checkData == true">
+        <div class="row" >
+          <div class="col-12 mb-2" style="display: -webkit-inline-box">
+            <div class="col-6 col-sm-4 itemDetails">
+              <span style="display: flex">
+                <div class="col-4">
+                  <label class="title"> Name : </label>
+                </div>
+                <div class="col-8" style="padding: 0 2px">
+                  <label> {{ CategoryDetails.memberName }} </label>
+                </div>
+              </span>
+            </div>
+    
+            <div class="col-6 col-sm-4 itemDetails">
+              <span style="display: flex">
+                <div class="col-4">
+                  <label class="title"> age : </label>
+                </div>
+                <div class="col-8" style="padding: 0 2px">
+                  <label> {{ CategoryDetails.age }} </label>
+                </div>
+              </span>
+            </div>
+    
+            <div class="col-6 col-sm-4 itemDetails">
+              <span style="display: flex">
+                <div class="col-4">
+                  <label class="title"> gender : </label>
+                </div>
+                <div class="col-8" style="padding: 0 2px">
+                  <label> {{ CategoryDetails.gender }} </label>
+                </div>
+              </span>
+            </div>
+          </div>
+        </div>
+    
+        <div class="row">
+          <div class="col-12 mb-2" style="display: -webkit-inline-box">
+            <div class="col-6 col-sm-4 itemDetails">
+              <span style="display: flex">
+                <div class="col-4">
+                  <label class="title"> bloodType : </label>
+                </div>
+                <div class="col-8" style="padding: 0 2px">
+                  <label> {{ CategoryDetails.bloodType }} </label>
+                </div>
+              </span>
+            </div>
+    
+            <div class="col-6 col-sm-8 itemDetails">
+              <span style="display: flex">
+                <div class="col-2">
+                  <label class="title"> healthInfo : </label>
+                </div>
+                <div class="col-10" style="padding: 0 2px">
+                  <label> {{ CategoryDetails.healthInfo }} </label>
+                </div>
+              </span>
+            </div>
+    
+            <div class="col-6 col-sm-4 itemDetails">
+              <span style="display: flex">
+                <div class="col-4">
+                  <label class="title"> allergies : </label>
+                </div>
+                <div class="col-8" style="padding: 0 2px">
+                  <label> {{ CategoryDetails.allergies }} </label>
+                </div>
+              </span>
+            </div>
+          </div>
+        </div>
+    
+        <div class="row">
+          <div class="col-12 mb-2" style="display: -webkit-inline-box">
+            <div class="col-6 col-sm-4 itemDetails">
+              <span style="display: flex">
+                <div class="col-4">
+                  <label class="title"> languages : </label>
+                </div>
+                <div class="col-8" style="padding: 0 2px">
+                  <label> {{ CategoryDetails.languages }} </label>
+                </div>
+              </span>
+            </div>
+    
+            <div class="col-6 col-sm-4 itemDetails">
+              <span style="display: flex">
+                <div class="col-4">
+                  <label class="title"> statusCd : </label>
+                </div>
+                <div class="col-8" style="padding: 0 2px">
+                  <label> {{ CategoryDetails.statusCd }} </label>
+                </div>
+              </span>
+            </div>
+    
+            <div class="col-6 col-sm-4 itemDetails">
+              <span style="display: flex">
+                <div class="col-4">
+                  <label class="title"> createDate : </label>
+                </div>
+                <div class="col-8" style="padding: 0 2px">
+                  <label> {{ CategoryDetails.createDate | date: "medium" }} </label>
+                </div>
+              </span>
+            </div>
+          </div>
+        </div>
+    
+        <div class="row">
+          <div class="col-12 mb-2" style="display: -webkit-inline-box">
+            <div class="col-6 col-sm-4 itemDetails">
+              <span style="display: flex">
+                <div class="col-4">
+                  <label class="title"> createUser : </label>
+                </div>
+                <div class="col-8" style="padding: 0 2px">
+                  <label> {{ CategoryDetails.createUser }} </label>
+                </div>
+              </span>
+            </div>
+           
+            <div class="col-6 col-sm-4 itemDetails">
+              <span style="display: flex">
+                <div class="col-4">
+                  <label class="title"> updateDate : </label>
+                </div>
+                <div class="col-8" style="padding: 0 2px">
+                  <label> {{ CategoryDetails.updateDate | date: "medium" }} </label>
+                </div>
+              </span>
+            </div>
+    
+            <div class="col-6 col-sm-4 itemDetails">
+              <span style="display: flex">
+                <div class="col-4">
+                  <label class="title"> updateUser : </label>
+                </div>
+                <div class="col-8" style="padding: 0 2px">
+                  <label> {{ CategoryDetails.updateUser }} </label>
+                </div>
+              </span>
+            </div>
+          </div>
+        </div>
+    
+
+      </div>
+      </div>
+    </div>
+  </div>
+</div>
+

@@ -27,6 +27,10 @@ viewProfile:boolean = false;
       },
       (error) => {                              
         console.log(error);
+        if(error.error.success == false){
+          this.checkNoFound = true;
+          this.emptyMessg = "No Data Found";
+        }
       // bootbox.alert({title: "<span style='color:#a33;font-weight: 500; font-size: 16px'>" + "Warning message" + "</span>", message: "<span style='color:Black;font-weight: 500; font-size: 16px'>" + "No data found" + "</span>"});
       }
      );

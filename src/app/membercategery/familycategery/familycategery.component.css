@@ -1,0 +1,13 @@
+.icon-image{
+    border: 1px solid #ddd;
+    border-radius: 50%;
+    width: 84px;
+    text-align: center;
+    padding: 11px;
+}
+
+.title{
+    text-align: center;
+    line-height: 2;
+    font-size: 18px;
+}

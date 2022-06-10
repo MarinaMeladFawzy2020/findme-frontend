@@ -18,5 +18,11 @@ export class MemberlistService {
     return this.http.get(this.URL+`family-member/GardMembers/${gardId}`);
   }
 
+  getFamilyMember(fmId :any): Observable<any> {
+    return this.http.get(this.URL+`family-member/${fmId}`);
+  }
 
+  createMember(fmobj :any): Observable<any> {
+    return this.http.post(this.URL+`family-member` , fmobj);
+  }
 }
