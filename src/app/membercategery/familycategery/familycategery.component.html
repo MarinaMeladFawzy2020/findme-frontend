@@ -23,6 +23,15 @@
               </div>
               </div>
 
+              <div class="blue-card member-card p-3 d-flex"  *ngIf="cat.gender == null">
+                <div class="col-4 icon-image">
+                  <span class="icon-boy icomoon" style="font-size: 40px;"></span> 
+               </div>
+              <div class="col-8">
+                <h6 class="title"> {{cat.memberName}} </h6>
+            </div>
+            </div>
+
        
         </a>
     
@@ -35,5 +44,5 @@
 <div class="no-data text-center mt-5" *ngIf="this.length == 0">
     <img src="assets/web/images/svg/2/no data.svg" alt="">
     <br>
-    No Data
+    No Data Found 
 </div>

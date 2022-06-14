@@ -1,3 +1,4 @@
+<p-toast position="top-left"></p-toast>
 <div class="container-fluid">
     <div class="page-titles">
       <ol class="breadcrumb">
@@ -8,9 +9,9 @@
     </div>
   
       <div class="actions" style="margin-top: -45px;">
-          <p-button label="editprofile" type="submit" icon="pi pi-user-edit" styleClass="p-button-warning btnNew"  
+          <p-button label="editprofile" type="submit" icon="pi pi-user-edit" styleClass="p-button-warning btnNew"   [disabled]="!viewProfile"
           [style]="{'margin-left': '.5em'}"   (click)="editprofiles()"  data-toggle="modal" data-target="#editprofile" ></p-button>
-          <app-editprofile #editprofile></app-editprofile>
+          <app-editprofile #editprofile (getResponse)="DoneEdit($event)"></app-editprofile>
       </div>
   
     <div class="card">

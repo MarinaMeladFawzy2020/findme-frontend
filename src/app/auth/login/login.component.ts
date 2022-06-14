@@ -33,6 +33,7 @@ export class LoginComponent implements OnInit {
             console.log(data);
             this.router.navigate(["/dashboard"]);
             this.messageService.add({severity:'success', summary: 'Success', detail: 'Done successfully'});
+            sessionStorage.setItem("indextabs" , "0")
 
           },error => {
            // console.log(error);

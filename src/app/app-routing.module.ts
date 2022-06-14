@@ -1,20 +1,20 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { SidebarComponent } from './shared/sidebar/sidebar.component';
-//import {AuthGuardService} from './interceptor/auth.guard';
+import {AuthGuard} from './interceptor/auth.guard';
 const routes: Routes = [
   // {path:'homepage',loadChildren:()=>import('./dashboard/dashboard.module').then(m=>m.DashboardModule)},
 
   {path:'dashboard',component:SidebarComponent,children:[
-    {path:'',loadChildren:()=>import('./dashboard/dashboard.module').then(module=>module.DashboardModule)} //,canActivate:[AuthGuardService]
+    {path:'',loadChildren:()=>import('./dashboard/dashboard.module').then(module=>module.DashboardModule) ,canActivate:[AuthGuard]} 
   ]},
 
   {path:'MemberList',component:SidebarComponent,children:[
-    {path:'',loadChildren:()=>import('./membercategery/membercategery.module').then(module=>module.MembercategeryModule)} //,canActivate:[AuthGuardService]
+    {path:'',loadChildren:()=>import('./membercategery/membercategery.module').then(module=>module.MembercategeryModule)  ,canActivate:[AuthGuard]} 
   ]},
 
   {path:'viewProfile',component:SidebarComponent,children:[
-    {path:'',loadChildren:()=>import('./profile/profile.module').then(module=>module.ProfileModule)} //,canActivate:[AuthGuardService]
+    {path:'',loadChildren:()=>import('./profile/profile.module').then(module=>module.ProfileModule)  ,canActivate:[AuthGuard]} 
   ]},
 
   {path:'login',loadChildren:()=>import('./auth/auth.module').then(m=>m.AuthModule)},

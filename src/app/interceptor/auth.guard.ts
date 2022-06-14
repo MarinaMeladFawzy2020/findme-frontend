@@ -12,12 +12,14 @@ export class AuthGuard implements CanActivate {
   canActivate():boolean|Observable<boolean>{
     // var isAuthenticated = this.authService.getAuthStatus();
     // console.log(isAuthenticated);
-    var token = localStorage.getItem('token');
+    var token = sessionStorage.getItem('token');
+   // alert(token)
     if(token)
     {
       return true
     }
-    this.router.navigateByUrl("");
+    this.router.navigateByUrl("/dashboard");
+    //this.router.navigate(["/dashboard"]);
     return false;
    }
   

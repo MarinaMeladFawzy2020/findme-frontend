@@ -13,13 +13,17 @@ export class AddmemberComponent implements OnInit {
 
   [x:string]:any;
   myForm!:FormGroup
-  constructor( private dataApi : MemberlistService , private messageService: MessageService) { }
+  AllgenderTYPE = [{"name":"Female" , "value":"F"} , {"name":"Male" , "value":"M"}]
+  constructor( private dataApi : MemberlistService , private messageService: MessageService) {
+    this.UserInfo = sessionStorage.getItem("UserInfo")
+    this.gardId= JSON.parse(this.UserInfo).gardId;
+   }
 
   ngOnInit(): void {
     this.myForm = new FormGroup({
       'memberName':new FormControl('',[Validators.required]), //Validators.pattern("[0-9]{11}")
       'age':new FormControl('',[Validators.required]),
-      'gender':new FormControl(''),
+      'gender':new FormControl('',[Validators.required]),
       'bloodType':new FormControl(''),
       'healthInfo':new FormControl(''),
       'allergies':new FormControl(''),
@@ -32,49 +36,54 @@ export class AddmemberComponent implements OnInit {
   onSubmit(){
     this.memberName = this.myForm.value?.memberName
     this.obj = {
-      "fmId": 563,
-      "gardId": 1,
-      "memberName": "Afafed",
-      "age": 70,
-      "gender": "F",
-      "bloodType": "A+",
-      "healthInfo": "مشاكل بالقولون.. عندها نغزه لازم تشرب ميه بسكر للتغلب عليها ",
-      "allergies": "لا يوجد",
+      "fmId": null,
+      "gardId": this.gardId,
+      "memberName": this.myForm.value?.memberName,
+      "age": this.myForm.value?.age,
+      "gender": this.myForm.value?.gender?.value,
+      "bloodType": this.myForm.value?.bloodType,
+      "healthInfo":this.myForm.value?.healthInfo,
+      "allergies": this.myForm.value?.allergies,
       "image": "",
-      "languages": "",
-      "statusCd": "A",
-      "createDate": "2022-04-13T23:31:31.000+00:00",
+      "languages":this.myForm.value?.languages,  
+      "memberCat": this.dataCat.mc_id,
+      "statusCd": "",
+      "createDate": "",
       "createUser": null,
       "updateDate": null,
       "updateUser": null,
-      "memberCat": 1
   }
+  console.log(this.obj)
     this.dataApi.createMember(this.obj).subscribe((result:any)=>{
       console.log(result);
-      if(result.code == 1){       
+       if(result.clientMessage == "SUCCESS" ){       
         bootbox.alert({
          title: "<span style='color:#218838 ;font-weight: 400; font-size: 16px;'>"+"Success Message"+"</span>  </i>",
-         message: "<span style='color:#218838 ;font-weight: 400; font-size: 16px;'>"+ result.message+"</span>  </i>",
+         message: "<span style='color:#218838 ;font-weight: 400; font-size: 16px;'>"+"Success Message"+"</span>  </i>",
          callback: function(){
              $('#addMember').modal('hide');
-             window.location.reload();
-
+            window.location.reload();
          }
      });
- 
-    
-       }else{
-         this.messageService.add({severity:'error', summary: 'Error', detail: result.message});
+       }else{ 
+         this.messageService.add({severity:'error', summary: 'Error', detail: result.status});
        }
-       
      },(error:any)=>{
-       console.log(error)
-       this.messageService.add({severity:'error', summary: 'Error', detail:"error"});
+      console.log(error)
+      this.messageService.add({severity:'error', summary: 'Error', detail:error.error.status});
        
      })
    }
 
-   
+   getTabCategory(_f1:any){
+    console.log(_f1)
+    this.myForm.reset();
+    this.dataCat = _f1;
+   }
  
+   reset(){
+    this.myForm.reset();
+  }
+
 
 }

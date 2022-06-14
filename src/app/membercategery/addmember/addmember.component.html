@@ -41,20 +41,28 @@
                  </div>
               </div>
             
+         
+              
 
               <div class="form-group col-md-3">
                 <label for="gender">gender <span class="text-danger">*</span> </label>
-                <input type="text" formControlName="gender"  class="form-control" id="gender" 
-                [ngClass]="{'border-danger': myForm.get('gender')?.invalid && myForm.get('gender')?.errors &&
-                (myForm.get('gender')?.dirty || myForm.get('gender')?.touched)}" >
-                
+                <div>
+                    <p-dropdown  inputId="gender"  [options]="AllgenderTYPE" formControlName="gender" [(ngModel)]="selectedgenderType"  name="gender"  optionLabel="name" [filter]="true" filterBy="name" [showClear]="true" placeholder="Select a gender TYPE ">
+                      <ng-template let-genderType pTemplate="item">
+                          <div>
+                              <div>{{genderType.name}}</div>
+                          </div>
+                      </ng-template>
+                  </p-dropdown>
+                  </div>
+        
                 <div *ngIf="myForm.get('gender')?.invalid && myForm.get('gender')?.errors && (myForm.get('gender')?.dirty || myForm.get('gender')?.touched)">
                     <div class="form-text text-danger mt-1" *ngIf="myForm.controls['gender']?.errors?.['required']"> gender is required.</div>
                  </div>
               </div>
 
               <div class="form-group col-md-3">
-                <label for="bloodType">bloodType <span class="text-danger">*</span> </label>
+                <label for="bloodType">bloodType  </label>
                 <input type="text" formControlName="bloodType"  class="form-control" id="bloodType" 
                 [ngClass]="{'border-danger': myForm.get('bloodType')?.invalid && myForm.get('bloodType')?.errors &&
                 (myForm.get('bloodType')?.dirty || myForm.get('bloodType')?.touched)}" >
@@ -65,7 +73,7 @@
               </div>
 
               <div class="form-group col-md-3">
-                <label for="allergies">allergies <span class="text-danger">*</span> </label>
+                <label for="allergies">allergies  </label>
                 <input type="text" formControlName="allergies"  class="form-control" id="allergies" 
                 [ngClass]="{'border-danger': myForm.get('allergies')?.invalid && myForm.get('allergies')?.errors &&
                 (myForm.get('allergies')?.dirty || myForm.get('allergies')?.touched)}" >

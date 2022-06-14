@@ -1,4 +1,4 @@
-import { Component, OnInit, ViewChild } from '@angular/core';
+import { Component, EventEmitter, OnInit, Output, ViewChild } from '@angular/core';
 import { ProfileService } from 'src/app/services/profile.service';
 import { EditprofileComponent } from '../editprofile/editprofile.component';
 
@@ -19,7 +19,13 @@ viewProfile:boolean = false;
   }
 
   ngOnInit(): void {
-    this.dataApi.getGuardianByID(this.gardId).subscribe(
+   this.getView(this.gardId);
+
+  }
+
+  getView(_gardId :any){
+    this.viewProfile = false;
+    this.dataApi.getGuardianByID(_gardId).subscribe(
       Response=> {
         console.log(Response)
         this.viewProfile = true;
@@ -34,13 +40,16 @@ viewProfile:boolean = false;
       // bootbox.alert({title: "<span style='color:#a33;font-weight: 500; font-size: 16px'>" + "Warning message" + "</span>", message: "<span style='color:Black;font-weight: 500; font-size: 16px'>" + "No data found" + "</span>"});
       }
      );
-
   }
 
   editprofiles(){
     this.editprofile.dataprofile(this.dataprofile);
-      
-    
   }
 
+    //handel Action Reset 
+    DoneEdit($event: any) {
+      console.log($event);
+     // alert("emit")
+     this.getView(this.gardId);
+    }
 }

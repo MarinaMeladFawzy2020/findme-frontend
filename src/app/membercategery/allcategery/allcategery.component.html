@@ -1,3 +1,4 @@
+<p-toast position="top-left"></p-toast>
 
 <div class="container-fluid">
 <div class="page-titles">
@@ -9,9 +10,7 @@
 <div class="actions" style="margin-top: -45px;">
     <p-button label="Add Member" type="submit" icon="pi pi-plus" styleClass="p-button-success btnNew"  
     [style]="{'margin-left': '.5em'}"   (click)="addMember()"  data-toggle="modal" data-target="#addMember" ></p-button>
-
-    <app-addmember></app-addmember>
-
+    <app-addmember #addMembers ></app-addmember>
 </div>
 
 <div class="row">

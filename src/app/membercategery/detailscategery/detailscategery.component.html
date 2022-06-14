@@ -10,6 +10,12 @@
     </ol>
   </div>
 
+<div class="actions" style="margin-top: -45px;"  >
+    <p-button label="Edit Member" type="submit" icon="pi pi-plus" styleClass="p-button-warning btnNew"   [disabled]="!checkData"
+    [style]="{'margin-left': '.5em'}"   (click)="editMember()"  data-toggle="modal" data-target="#editMember" ></p-button>
+    <app-editmember #editMembers  (getResponse1)="getDoneEdit($event)" ></app-editmember>
+</div>
+
   <div class="row">
     <div class="col-xl-12" >
       <div class="card">

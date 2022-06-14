@@ -25,4 +25,10 @@ export class MemberlistService {
   createMember(fmobj :any): Observable<any> {
     return this.http.post(this.URL+`family-member` , fmobj);
   }
+
+  updateMember( fmobj:any): Observable<any> {
+    return this.http.put(this.URL+`family-member` , fmobj);
+  }
+
+
 }
