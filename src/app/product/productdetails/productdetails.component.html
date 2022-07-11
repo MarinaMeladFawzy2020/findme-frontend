@@ -1,0 +1,99 @@
+
+<div class="container-fluid">
+<div class="page-titles">
+    <ol class="breadcrumb">
+    <li class="breadcrumb-item ">
+        <a routerLink="/products">Product</a>
+    </li>
+    <li class="breadcrumb-item active">
+        <a href="javascript:void(0)">Product Details</a>
+    </li>
+    </ol>
+</div>
+
+<div class="row">
+    <div class="col-xl-12" >
+      <div class="card">
+        <div class="card-body" *ngIf="checkNoFound == true">
+         <span class="emptyMessg"> {{this.emptyMessg}}</span>
+        </div>
+
+        <div class="card-body"  *ngIf="checkData">
+        <div class="row" >
+          <!-- {{dataDetails | json}} -->
+          <div class="col-12 mb-2" style="display: -webkit-inline-box">
+            <div class="col-6 col-sm-4 itemDetails">
+
+              <div  style="text-align: center;">
+                <img src="{{images_path}}{{dataDetails.featuredPhoto.photo_path}}" 
+                alt="{{dataDetails.featuredPhoto.caption}}" style="width: 50%; margin-top: 40px;">
+               </div>
+                <!-- <p-card>  </p-card> -->
+                
+            </div>
+
+            <div class="col-6 col-sm-8 itemDetails">
+                <p-card >
+                    <div>
+                        <div class="col-12 col-sm-12 itemDetails">
+                            <span style="display: flex">
+                              <div class="col-3">
+                                <label class="title"> Name : </label>
+                              </div>
+                              <div class="col-9" style="padding: 0 2px">
+                                <div [innerHTML]="this.dataDetails.p_name"></div>
+                              </div>
+                            </span>
+                          </div>
+
+                          <div class="col-12 col-sm-12 itemDetails">
+                            <span style="display: flex">
+                              <div class="col-3">
+                                <label class="title"> Description : </label>
+                              </div>
+                              <div class="col-9" style="padding: 0 2px">
+                                <div [innerHTML]="this.dataDetails.p_description"></div>
+                              </div>
+                            </span>
+                          </div>
+
+                          <div class="col-12 col-sm-12 itemDetails">
+                            <span style="display: flex">
+                              <div class="col-3">
+                                <label class="title"> Short Description : </label>
+                              </div>
+                              <div class="col-9" style="padding: 0 2px">
+                                <div [innerHTML]="this.dataDetails.p_short_description"></div>
+                              </div>
+                            </span>
+                          </div>
+
+                          <div class="col-12 col-sm-12 itemDetails">
+                            <span style="display: flex">
+                              <div class="col-3">
+                                <label class="title"> Feature : </label>
+                              </div>
+                              <div class="col-9" style="padding: 0 2px">
+                                <!-- <label> {{ dataDetails.p_feature }} </label> -->
+                                <div [innerHTML]="this.dataDetails.p_feature"></div>
+
+                              </div>
+                            </span>
+                          </div>
+                          
+
+                    </div>
+                </p-card>
+                
+            </div>
+          </div>
+
+      
+        </div>
+        </div>
+        </div>
+        </div>
+</div>
+
+
+<!-- {{this.dataDetails | json}} -->

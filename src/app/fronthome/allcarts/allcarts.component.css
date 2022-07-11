@@ -1,0 +1,10 @@
+.card-length{
+    /* background: red; */
+    max-height: 500px;
+    overflow-y: scroll;
+}
+.timeline li {
+    border-bottom: 1px solid #ddd;
+    margin-bottom: 10px;
+    margin-top: 10px;
+}

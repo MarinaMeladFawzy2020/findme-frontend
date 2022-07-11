@@ -12,6 +12,9 @@ const routes: Routes = [
   {path:'MemberList',component:SidebarComponent,children:[
     {path:'',loadChildren:()=>import('./membercategery/membercategery.module').then(module=>module.MembercategeryModule)  ,canActivate:[AuthGuard]} 
   ]},
+  {path:'products',component:SidebarComponent,children:[
+    {path:'',loadChildren:()=>import('./product/product.module').then(module=>module.ProductModule)  ,canActivate:[AuthGuard]} 
+  ]},
 
   {path:'viewProfile',component:SidebarComponent,children:[
     {path:'',loadChildren:()=>import('./profile/profile.module').then(module=>module.ProfileModule)  ,canActivate:[AuthGuard]} 

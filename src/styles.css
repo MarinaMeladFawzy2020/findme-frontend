@@ -186,3 +186,6 @@ p-inputnumber, .p-inputnumber  {
     width: 100%;
     height: 35px;
 }
+ul, ol{
+    margin-left: 0 !important;
+}

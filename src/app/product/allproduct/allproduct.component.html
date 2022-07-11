@@ -1,0 +1,65 @@
+
+<div class="container-fluid">
+<div class="page-titles">
+    <ol class="breadcrumb">
+        <li class="breadcrumb-item active"><a href="javascript:void(0)">Product List</a></li>
+    </ol>
+</div>
+
+
+
+<div class="row">
+   
+    
+    <div class="col-xl-12">
+        <div class="card">
+            <div class="card-body">
+                <div class="profile-tab"  *ngIf="checkdata" >
+                    <!-- {{ allProduct | json}} -->
+
+                    <div class="row pb-5">
+                        <div class="col-lg-3 col-md-6" *ngFor="let product of allProduct ; let i = index">
+                            <a (click)="showDetails(product)">
+                                <div class="single-shop-box">
+                                    <div class="thumb text-center">
+                                        <img src="{{images_path}}{{product.featuredPhoto.photo_path}}" 
+                                        alt="{{product.featuredPhoto.caption}}" style="width: 50%;">
+                                        <div class="reborn">
+                                            <span>Sale</span>
+                                        </div>
+                                    
+                                    </div>
+                                    <div class="content">
+                                        <br>
+                                        <ul>
+                                            <li><i class="fas fa-star"></i></li>
+                                            <li><i class="fas fa-star"></i></li>
+                                            <li><i class="fas fa-star"></i></li>
+                                            <li><i class="fas fa-star"></i></li>
+                                            <li><i class="fas fa-star-half-alt"></i></li>
+                                        </ul>
+                                        <div  style="height: 43px;" [innerHTML]="product.p_name"></div>
+
+                                        <div class="pricing">
+                                            <div class="discount-price">{{product.p_old_price}} </div> 
+                                            <div class="regular-price">{{product.p_current_price}}</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+        </div>
+
+
+    </div>

@@ -49,7 +49,9 @@ import {ScrollTopModule} from 'primeng/scrolltop';
 import {ProgressSpinnerModule} from 'primeng/progressspinner';
 import {SidebarModule} from 'primeng/sidebar';
 
+import {MenuModule} from 'primeng/menu';
 
+import {MenuItem} from 'primeng/api';
 const primengModules = [
   SidebarModule,
   ButtonModule,
@@ -97,6 +99,7 @@ const primengModules = [
   MessagesModule,
   ScrollTopModule,
   ProgressSpinnerModule,
+  MenuModule,
 
 ];
 

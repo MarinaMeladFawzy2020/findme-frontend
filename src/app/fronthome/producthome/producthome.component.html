@@ -1,0 +1,71 @@
+<p-toast position="top-right"></p-toast>
+
+<section class="appie-about-area mb-100" style="background-color: #F7F7F7" id="accessories">
+    <div class="container">
+        <div class="row ">
+            <div class="col-sm-12">
+                <div class="appie-traffic-title">
+                    <h3 class="title pt-5">Accessories  </h3>
+                </div>
+            </div>
+            
+        </div>
+        <div class="row pb-5">
+
+            <div class="col-lg-3 col-md-6" *ngFor="let product of allProduct ; let i = index">
+                <div class="single-shop-box" >
+                <a (click)="showDetails(product)" >
+                        <div class="thumb text-center">
+                            <img src="{{images_path}}{{product.featuredPhoto.photo_path}}" 
+                            alt="{{product.featuredPhoto.caption}}" style="width: 50%;">
+                            <div class="reborn">
+                                <span>Sale</span>
+                            </div>
+                        </div>
+                        <div class="content">
+                            <br>
+                            <ul>
+                                <li><i class="fas fa-star"></i></li>
+                                <li><i class="fas fa-star"></i></li>
+                                <li><i class="fas fa-star"></i></li>
+                                <li><i class="fas fa-star"></i></li>
+                                <li><i class="fas fa-star-half-alt"></i></li>
+                            </ul>
+                            <div  style="height: 43px;" [innerHTML]="product.p_name"></div>
+
+                            <div class="pricing">
+                                <div class="discount-price">{{product.p_old_price}} </div> 
+                                <div class="regular-price">{{product.p_current_price}}</div>
+                            </div>
+                        </div>
+                </a>
+
+                <div>
+                    <button class="btn btn-default main-btn" type="submit"  (click)="addToCart(product)" > <i class="fa fa-cart-plus pr-2"> </i>Add To Cart </button> 
+                </div>
+             </div>
+
+
+                
+                
+            </div>
+         
+            
+        </div>
+    </div>
+</section>
+
+
+
+<!-- 
+
+<i class="fa fa-cart-plus mr-4 p-text-secondary" pBadge style="font-size: 2rem" severity="danger"  value="5" (click)="menu.toggle($event)"></i>
+<p-menu #menu [popup]="true" [model]="itemscarts">
+    {{menu}}
+    <span>{{model | json}}</span>
+    <span>55</span>
+</p-menu>
+ -->
+
+
+

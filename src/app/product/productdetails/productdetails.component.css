@@ -1,0 +1,21 @@
+.itemDetails{
+    padding: 2px;
+    font-size: 14px;
+}
+
+.title{
+    font-weight: 700;
+    font-size: 14px !important;
+    float: left;
+}
+.actions{
+    float: right;
+}
+
+.emptyMessg{
+    font-size: 18px;
+    color: #a33;
+    text-align: center;
+    margin-left: 40%;
+    font-weight: 800;
+}

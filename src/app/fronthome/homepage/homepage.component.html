@@ -42,6 +42,11 @@
                             </li>
                             
                             
+                            <div style="display: inline-flex ;">
+                                <!-- <app-allcarts #allcart></app-allcarts> -->
+                                </div>
+                      
+                            
                             <li class="menu-item-has-children active"><a href="#contact">Contact</a></li>
                             <li class="menu-item-has-children active">
                                 <a class="login-btn" routerLink="/login"><i class="fas fa-user"></i> Login</a>
@@ -49,6 +54,9 @@
                             <li class="menu-item-has-children active">
                                 <a class="login-btn" href="#"><i class="fa-solid fa-earth-africa"></i> عربي</a>
                             </li>
+
+                      
+
                         </ul>
                         
                     </div>
@@ -80,7 +88,7 @@
 <!--====== APPIE HEADER PART START ======-->
 
 <header class="appie-header-area appie-header-2-area appie-sticky">
-    <div class="container">
+    <div class="container-fluid" style="padding: 40px !important;">
         <div class="header-nav-box">
             <div class="row align-items-center">
                 <div class="col-lg-2 col-md-4 col-sm-5 col-6 order-1 order-sm-1">
@@ -116,12 +124,22 @@
                 </div>
                 <div class="col-lg-4  col-md-7 col-sm-6 col-6 order-2 order-sm-3">
                     <div class="appie-btn-box text-right  ">
+
+                        <div style="display: inline-flex ;">
+                        <app-allcarts #allcart></app-allcarts>
+                        </div>
+
                         <a class="login-btn ml-2 mr-2 d-none d-lg-inline-block" routerLink="/login"><i class="fas fa-user"></i> Login</a>
                         <a class="main-btn ml-2 mr-2" href="#">Get Started</a>
+
+                        
                         <a class="login-btn ml-2 mr-2 " href="#"><i class="fa-solid fa-earth-africa"></i> عربي</a>
                         <div class="toggle-btn ml-30 canvas_open d-lg-none d-block">
                             <i class="fa fa-bars"></i>
                         </div>
+
+                     
+
                     </div>
                 </div>
             </div>
@@ -318,134 +336,6 @@
 
 <!--====== APPIE ABOUT PART START ======-->
 
-<section class="appie-about-area mb-100" style="background-color: #F7F7F7" id="accessories">
-    <div class="container">
-        <div class="row ">
-            <div class="col-sm-12">
-                <div class="appie-traffic-title">
-                    <h3 class="title pt-5">Accessories  </h3>
-                </div>
-            </div>
-            
-        </div>
-        <div class="row pb-5">
-            <div class="col-lg-3 col-md-6">
-                <a href="">
-                    <div class="single-shop-box">
-                        <div class="thumb text-center">
-                            <img src="assets/web/images/product.jfif" alt="">
-                            <div class="reborn">
-                                <span>Sale</span>
-                            </div>
-                        
-                        </div>
-                        <div class="content">
-                            <ul>
-                                <li><i class="fas fa-star"></i></li>
-                                <li><i class="fas fa-star"></i></li>
-                                <li><i class="fas fa-star"></i></li>
-                                <li><i class="fas fa-star"></i></li>
-                                <li><i class="fas fa-star-half-alt"></i></li>
-                            </ul>
-                            <a href="#">Silicon Bracelet SB1610</a>
-                            <div class="pricing">
-                                <div class="discount-price">SAR 15.00 </div> 
-                                <div class="regular-price">SAR 25.00</div>
-                            </div>
-                        </div>
-                    </div>
-                </a>
-                
-            </div>
-            <div class="col-lg-3 col-md-6">
-                <a href="">
-                    <div class="single-shop-box">
-                        <div class="thumb text-center">
-                            <img src="assets/web/images/product.jfif" alt="">
-                            <div class="reborn">
-                                <span>Sale</span>
-                            </div>
-                        
-                        </div>
-                        <div class="content">
-                            <ul>
-                                <li><i class="fas fa-star"></i></li>
-                                <li><i class="fas fa-star"></i></li>
-                                <li><i class="fas fa-star"></i></li>
-                                <li><i class="fas fa-star"></i></li>
-                                <li><i class="fas fa-star-half-alt"></i></li>
-                            </ul>
-                            <a href="#">Silicon Bracelet SB1610</a>
-                            <div class="pricing">
-                                <div class="discount-price">SAR 15.00 </div> 
-                                <div class="regular-price">SAR 25.00</div>
-                            </div>
-                        </div>
-                    </div>
-                </a>
-                
-            </div>
-            <div class="col-lg-3 col-md-6">
-                <a href="">
-                    <div class="single-shop-box">
-                        <div class="thumb text-center">
-                            <img src="assets/web/images/product.jfif" alt="">
-                            <div class="reborn">
-                                <span>Sale</span>
-                            </div>
-                        
-                        </div>
-                        <div class="content">
-                            <ul>
-                                <li><i class="fas fa-star"></i></li>
-                                <li><i class="fas fa-star"></i></li>
-                                <li><i class="fas fa-star"></i></li>
-                                <li><i class="fas fa-star"></i></li>
-                                <li><i class="fas fa-star-half-alt"></i></li>
-                            </ul>
-                            <a href="#">Silicon Bracelet SB1610</a>
-                            <div class="pricing">
-                                <div class="discount-price">SAR 15.00 </div> 
-                                <div class="regular-price">SAR 25.00</div>
-                            </div>
-                        </div>
-                    </div>
-                </a>
-                
-            </div>
-            <div class="col-lg-3 col-md-6">
-                <a href="">
-                    <div class="single-shop-box">
-                        <div class="thumb text-center">
-                            <img src="assets/web/images/product.jfif" alt="">
-                            <div class="reborn">
-                                <span>Sale</span>
-                            </div>
-                        
-                        </div>
-                        <div class="content">
-                            <ul>
-                                <li><i class="fas fa-star"></i></li>
-                                <li><i class="fas fa-star"></i></li>
-                                <li><i class="fas fa-star"></i></li>
-                                <li><i class="fas fa-star"></i></li>
-                                <li><i class="fas fa-star-half-alt"></i></li>
-                            </ul>
-                            <a href="#">Silicon Bracelet SB1610</a>
-                            <div class="pricing">
-                                <div class="discount-price">SAR 15.00 </div> 
-                                <div class="regular-price">SAR 25.00</div>
-                            </div>
-                        </div>
-                    </div>
-                </a>
-                
-            </div>
-    
-            
-        </div>
-    </div>
-</section>
 
 <!--====== APPIE shop  PART ENDS ======-->
     <!--====== APPIE VIDEO PLAYER PART START ======-->
@@ -475,11 +365,12 @@
     </div>
 </section>
 
-<!--====== APPIE VIDEO PLAYER PART ENDS ======-->
+<!--====== Start All Products ======-->
+
+<app-producthome (getResponse)="getaddproduct($event)"></app-producthome>
 
 
-
-<!--====== APPIE PAGE TITLE PART ENDS ======-->
+<!--====== End All Products======-->
     <!-- Contact Start -->
     <section class="contact-section" id="contact">
         <div class="container">

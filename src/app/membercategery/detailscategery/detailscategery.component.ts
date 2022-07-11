@@ -12,9 +12,7 @@ export class DetailscategeryComponent implements OnInit {
 [x:string]:any;
 checkData :boolean = false; 
 @ViewChild('editMembers') editMembers!: EditmemberComponent;
-
   constructor(private activeRoute: ActivatedRoute , private dataApi : MemberlistService ) { }
-
   ngOnInit(): void {
 
     console.log(this.activeRoute.snapshot.params.id);
