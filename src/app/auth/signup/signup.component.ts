@@ -18,7 +18,7 @@ export class SignupComponent implements OnInit {
   ngOnInit(): void {
     this.signupForm = new FormGroup({
       'gardName':new FormControl('',[Validators.required ]),
-      'createUser':new FormControl('',[Validators.required ]),
+      'createUser':new FormControl(''),
       'email':new FormControl('',[Validators.required ,Validators.email]), //
       'password':new FormControl('',[Validators.required ]),
       'mobileNo':new FormControl('',[Validators.required , Validators.pattern("[0-9]{11}") ]),
@@ -43,7 +43,7 @@ export class SignupComponent implements OnInit {
       "gardName": this.signupForm.value.gardName,
       "mobCountryCd": "+"+this.mobCountryCd,
       "mobileNo": this.signupForm.value.mobileNo,
-      "createUser": this.signupForm.value.createUser,
+      "createUser": "",
       "email":this.signupForm.value.email,
       "password": this.signupForm.value.password
     };

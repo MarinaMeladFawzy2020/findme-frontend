@@ -19,7 +19,7 @@
                 <small class="form-text text-danger mt-1" *ngIf="signupForm.controls['gardName']?.errors?.['required']"> gardName is required.</small>
             </div>
           </div>
-          <div class="col-6">
+          <!-- <div class="col-6">
             <label for="inputtext2"> createUser <span class="text-danger">*</span></label>
             <div>
                 <span class="p-input-icon-left">
@@ -33,26 +33,29 @@
                 <small class="form-text text-danger mt-1" *ngIf="signupForm.controls['createUser']?.errors?.['required']"> createUser is required.</small>
             </div>
 
-          </div>
+          </div> -->
+
+          <div class="col-6">
+            <label for="inputEmail"> Your Email <span class="text-danger">*</span></label>
+            <div>
+                <span class="p-input-icon-left">
+                    <i class="pi pi-envelope"></i>
+                    <input type="email"  pInputText placeholder="example@mail.com" [(ngModel)]="email"   formControlName="email" name="email"
+                    [ngClass]="{'border-danger': signupForm.get('email')?.invalid && signupForm.get('email')?.errors &&
+                    (signupForm.get('email')?.dirty || signupForm.get('email')?.touched) } " />
+                </span>
+            </div>
+            <div *ngIf="signupForm.get('email')?.invalid && signupForm.get('email')?.errors && (signupForm.get('email')?.dirty || signupForm.get('email')?.touched)">
+                <small class="form-text text-danger mt-1" *ngIf="signupForm.controls['email']?.errors?.['required']"> Email is required.</small>
+                <small class="form-text text-danger mt-1" *ngIf="signupForm.controls['email']?.errors?.['email']"> Email is Not Valid.</small>
+            </div>
+           
+        </div>
+        
         </div>
 
         <div class="row  mb-3">
-            <div class="col-6">
-                <label for="inputEmail"> Your Email <span class="text-danger">*</span></label>
-                <div>
-                    <span class="p-input-icon-left">
-                        <i class="pi pi-envelope"></i>
-                        <input type="email"  pInputText placeholder="example@mail.com" [(ngModel)]="email"   formControlName="email" name="email"
-                        [ngClass]="{'border-danger': signupForm.get('email')?.invalid && signupForm.get('email')?.errors &&
-                        (signupForm.get('email')?.dirty || signupForm.get('email')?.touched) } " />
-                    </span>
-                </div>
-                <div *ngIf="signupForm.get('email')?.invalid && signupForm.get('email')?.errors && (signupForm.get('email')?.dirty || signupForm.get('email')?.touched)">
-                    <small class="form-text text-danger mt-1" *ngIf="signupForm.controls['email']?.errors?.['required']"> Email is required.</small>
-                    <small class="form-text text-danger mt-1" *ngIf="signupForm.controls['email']?.errors?.['email']"> Email is Not Valid.</small>
-                </div>
-               
-            </div>
+            
             <div class="col-6">
                 <label for="inputPassword"> Your Password <span class="text-danger">*</span></label>
                 <div>
@@ -68,32 +71,32 @@
                 </div>
                
             </div>
+
+            <div class="col-6">
+                <label for="inputtext2"> mobileNo <span class="text-danger">*</span></label>
+                <div>
+                    <span class="p-input-icon-left">
+                        <i class="pi pi-phone"></i>
+                        <input type="text" ng2TelInput pInputText placeholder="mobileNo"    formControlName="mobileNo" name="mobileNo" maxlength="11"  (countryChange)="oncountryChange($event)"
+                        [ngClass]="{'border-danger': signupForm.get('mobileNo')?.invalid && signupForm.get('mobileNo')?.errors &&
+                        (signupForm.get('mobileNo')?.dirty || signupForm.get('mobileNo')?.touched) } " />
+                    </span>
+                </div>
+                <div *ngIf="signupForm.get('mobileNo')?.invalid && signupForm.get('mobileNo')?.errors && (signupForm.get('mobileNo')?.dirty || signupForm.get('mobileNo')?.touched)">
+                    <small class="form-text text-danger mt-1" *ngIf="signupForm.controls['mobileNo']?.errors?.['required']"> mobileNo is required.</small>
+                </div>
+    
+                <div *ngIf="signupForm.get('mobileNo')?.invalid && signupForm.get('mobileNo')?.errors && (signupForm.get('mobileNo')?.dirty || signupForm.get('mobileNo')?.touched)">
+                  <small class="form-text text-danger mt-1" *ngIf="signupForm.controls['mobileNo']?.errors?.['pattern']"> mobileNo is not Valid.</small>
+              </div>
+              
+              </div>
         </div>
 
 
 
         <div class="row">
-            <div class="col-12">
-              <label for="inputtext2"> mobileNo <span class="text-danger">*</span></label>
-              <div>
-                  <span class="p-input-icon-left">
-                      <i class="pi pi-phone"></i>
-                      <input type="text" ng2TelInput pInputText placeholder="mobileNo"    formControlName="mobileNo" name="mobileNo" maxlength="11"  (countryChange)="oncountryChange($event)"
-                      [ngClass]="{'border-danger': signupForm.get('mobileNo')?.invalid && signupForm.get('mobileNo')?.errors &&
-                      (signupForm.get('mobileNo')?.dirty || signupForm.get('mobileNo')?.touched) } " />
-                  </span>
-              </div>
-              <div *ngIf="signupForm.get('mobileNo')?.invalid && signupForm.get('mobileNo')?.errors && (signupForm.get('mobileNo')?.dirty || signupForm.get('mobileNo')?.touched)">
-                  <small class="form-text text-danger mt-1" *ngIf="signupForm.controls['mobileNo']?.errors?.['required']"> mobileNo is required.</small>
-              </div>
-  
-              <div *ngIf="signupForm.get('mobileNo')?.invalid && signupForm.get('mobileNo')?.errors && (signupForm.get('mobileNo')?.dirty || signupForm.get('mobileNo')?.touched)">
-                <small class="form-text text-danger mt-1" *ngIf="signupForm.controls['mobileNo']?.errors?.['pattern']"> mobileNo is not Valid.</small>
-            </div>
-
             
-
-            </div>
           </div>
     <br>
     <hr class="mt-1 mb-1">
